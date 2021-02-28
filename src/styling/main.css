@@ -1,0 +1,209 @@
+#main-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0px 50px 0px;
+    
+}
+#main-content-inner {
+    width: 75%;
+    display: flex;
+    /* padding: 0em 10em; */
+}
+
+#main-content-inner #m-c-i-header{
+    font-family: 'Fredoka One', cursive;
+    font-size: 4em;
+    opacity: 70%;
+}
+
+#main-content-inner #m-c-i-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#main-content-inner #m-c-i-container-inner {
+    margin-top: 5%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#main-content-inner button {
+    padding: 1em;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer; 
+    font-family: 'Fredoka One', cursive;
+    transition: 0.3s;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 1.2em;
+}
+
+#main-content-inner button:hover {
+    background-color: orange;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+}
+
+#main-content-inner #m-c-i-text {
+    width: 70%;
+    font-weight: bold;
+    opacity: 70%;
+}
+
+#registration-frame {
+    font-family: 'Fira Sans', sans-serif;
+    max-width: 25%;
+    /* height: 70vh; */
+    background: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+    z-index: 3;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#registration-frame h1 {
+    font-family: 'Fredoka One', cursive;
+    opacity: 0.7;
+}
+
+#registration-frame #introduction-text {
+    /* font-family: 'Fredoka One', cursive; */
+    opacity: 0.7;
+}
+
+#registration-frame .container {
+    padding: 0.5em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#registration-frame hr, #registration-frame .container hr {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+input[type=text], input[type=password] {
+    padding: 15px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: none;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+
+}
+  
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+    outline: none;
+}
+
+#register_button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 10px;
+  }
+
+
+  #cancel_button {
+    background-color: #f3f3f3;
+    color: #000;
+    padding: 0.5em;
+    /* margin: 8px 0; */
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 10px;      
+  }
+
+  #cancel_button:hover {
+    background-color: green;
+         
+  }
+
+  .news-container {
+      display:flex;
+        flex-direction: column;
+        gap: 1em;
+        max-height: 400px;
+        /* overflow: hidden; */
+        padding: 1em;
+        background: #fff;
+        border: 2px solid #f3f3f3;
+        cursor: pointer; 
+  }
+
+  .news-container:hover {
+    box-shadow: 0px 0px 5px #bbb;
+    border: 2px solid #fff;
+
+}
+
+
+
+
+  .news-container img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .news-container-first  {
+    position: relative;
+  }
+
+
+  #bullet-container {
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2em;
+  }
+
+  #latest-news {
+    display:flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+
+.review-container {
+    display:flex;
+      flex-direction: column;
+      gap: 1em;
+      max-height: 400px;
+      /* overflow: hidden; */
+      padding: 1em;
+      background: rgba(0, 200, 0, 0.1);
+      border: 2px solid #f3f3f3;
+      cursor: pointer; 
+}
+
+.review-container:hover {
+    box-shadow: 0px 0px 5px #bbb;
+    border: 2px solid #fff;
+
+}
+
+#reviews-container {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+}

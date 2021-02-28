@@ -1,0 +1,223 @@
+{
+    "maths":{
+        "header":{"url":"https://images.pexels.com/photos/1329295/pexels-photo-1329295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+        "overview":{ "text":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively, you’re finding that they are struggling to keep pace with their peers – Fleet Tutors can assist in finding and arranging the most suitable tutor for your requirements." }
+        , "structure": {
+            "content": [{"text":"Applied Maths"}, {"text":"Decision Maths"}, {"text":"Discrete Maths"}, {"text":"Further Maths"}, {"text":"Mechanics"}, {"text":"Pure Maths"}, {"text":"Statistics"}, {"text":"11+"}, {"text":"GCSE's"}, {"text":"A-Levels"}]
+        },
+        "tutors":[
+            {
+                "name": "James May",
+                "primary": "BA Mathematics 2:1 - Oxford",
+                "subjects": "Maths, Biology, Chemistry",
+                "profile": "Graduated in 2019 with a degree in Mathematics whilst at my Oxford. I have 10 years of experience."
+            },
+            {
+                "name": "Maths tutor 2",
+                "primary": "BA Human Sciences 2:1 - Oxford",
+                "subjects": "Maths, Science, Biology, Chemistry",
+                "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+            },
+            {
+                "name": "Maths tutor 3",
+                "primary": "BA Human Sciences 2:1 - Oxford",
+                "subjects": "Maths, Science, Biology, Chemistry",
+                "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+            }                                    
+        ],
+        "benefits":[{"text":"Initial and continual assessment throughout"}, 
+            {"text":"1-to-1, home, online and group lessons available"}, 
+            {"text":"Selected tutor network available across the UK"},
+            {"text":"Experienced tutors from KS1 through to IB and University levels"}
+        ],
+        "enquiry": {
+            "text":"Maths study can be a challenge at the best of times. Many students – even those with good grades in other subjects – struggle to find their ‘eureka’ moment. Often they just need additional support. But as a parent you know how hard it can be juggling busy lives with homework, and still finding quality time for family. Fleet Tutors can help."
+        },
+        "testimonials":[]        
+    },
+    "english":{
+        "header":{"url":"https://images.pexels.com/photos/1329295/pexels-photo-1329295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+        "overview":{ "text":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively, you’re finding that they are struggling to keep pace with their peers – Fleet Tutors can assist in finding and arranging the most suitable tutor for your requirements." }
+        , "structure": {
+            "content": [{"text":"Applied Maths"}, {"text":"Decision Maths"}, {"text":"Discrete Maths"}, {"text":"Further Maths"}, {"text":"Mechanics"}, {"text":"Pure Maths"}, {"text":"Statistics"}, {"text":"11+"}, {"text":"GCSE's"}, {"text":"A-Levels"}]
+        },
+        "tutors":[
+            {
+                "name": "James May",
+                "primary": "BA Mathematics 2:1 - Oxford",
+                "subjects": "Maths, Biology, Chemistry",
+                "profile": "Graduated in 2019 with a degree in Mathematics whilst at my Oxford. I have 10 years of experience."
+            },
+            {
+                "name": "Maths tutor 2",
+                "primary": "BA Human Sciences 2:1 - Oxford",
+                "subjects": "Maths, Science, Biology, Chemistry",
+                "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+            },
+            {
+                "name": "Maths tutor 3",
+                "primary": "BA Human Sciences 2:1 - Oxford",
+                "subjects": "Maths, Science, Biology, Chemistry",
+                "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+            }                                    
+        ],
+        "benefits":[{"text":"Initial and continual assessment throughout"}, 
+            {"text":"1-to-1, home, online and group lessons available"}, 
+            {"text":"Selected tutor network available across the UK"},
+            {"text":"Experienced tutors from KS1 through to IB and University levels"}
+        ],
+        "enquiry": {
+            "text":"Maths study can be a challenge at the best of times. Many students – even those with good grades in other subjects – struggle to find their ‘eureka’ moment. Often they just need additional support. But as a parent you know how hard it can be juggling busy lives with homework, and still finding quality time for family. Fleet Tutors can help."
+        },
+        "testimonials":[]        
+    },
+    "science":{
+        "header":{"url":"https://images.pexels.com/photos/1329295/pexels-photo-1329295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+        "overview":{ "text":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively, you’re finding that they are struggling to keep pace with their peers – Fleet Tutors can assist in finding and arranging the most suitable tutor for your requirements." }
+        , "structure": {
+            "content": [{"text":"Applied Maths"}, {"text":"Decision Maths"}, {"text":"Discrete Maths"}, {"text":"Further Maths"}, {"text":"Mechanics"}, {"text":"Pure Maths"}, {"text":"Statistics"}, {"text":"11+"}, {"text":"GCSE's"}, {"text":"A-Levels"}]
+        },
+        "tutors":[
+            {
+                "name": "James May",
+                "primary": "BA Mathematics 2:1 - Oxford",
+                "subjects": "Maths, Biology, Chemistry",
+                "profile": "Graduated in 2019 with a degree in Mathematics whilst at my Oxford. I have 10 years of experience."
+            },
+            {
+                "name": "Maths tutor 2",
+                "primary": "BA Human Sciences 2:1 - Oxford",
+                "subjects": "Maths, Science, Biology, Chemistry",
+                "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+            },
+            {
+                "name": "Maths tutor 3",
+                "primary": "BA Human Sciences 2:1 - Oxford",
+                "subjects": "Maths, Science, Biology, Chemistry",
+                "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+            }                                    
+        ],
+        "benefits":[{"text":"Initial and continual assessment throughout"}, 
+            {"text":"1-to-1, home, online and group lessons available"}, 
+            {"text":"Selected tutor network available across the UK"},
+            {"text":"Experienced tutors from KS1 through to IB and University levels"}
+        ],
+        "enquiry": {
+            "text":"Maths study can be a challenge at the best of times. Many students – even those with good grades in other subjects – struggle to find their ‘eureka’ moment. Often they just need additional support. But as a parent you know how hard it can be juggling busy lives with homework, and still finding quality time for family. Fleet Tutors can help."
+        },
+        "testimonials":[]        
+    },
+    "languages":{
+        "header":{"url":"https://images.pexels.com/photos/1329295/pexels-photo-1329295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+        "overview":{ "text":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively, you’re finding that they are struggling to keep pace with their peers – Fleet Tutors can assist in finding and arranging the most suitable tutor for your requirements." }
+        , "structure": {
+            "content": [{"text":"Applied Maths"}, {"text":"Decision Maths"}, {"text":"Discrete Maths"}, {"text":"Further Maths"}, {"text":"Mechanics"}, {"text":"Pure Maths"}, {"text":"Statistics"}, {"text":"11+"}, {"text":"GCSE's"}, {"text":"A-Levels"}]
+        },
+        "tutors":[
+            {
+                "name": "James May",
+                "primary": "BA Mathematics 2:1 - Oxford",
+                "subjects": "Maths, Biology, Chemistry",
+                "profile": "Graduated in 2019 with a degree in Mathematics whilst at my Oxford. I have 10 years of experience."
+            },
+            {
+                "name": "Maths tutor 2",
+                "primary": "BA Human Sciences 2:1 - Oxford",
+                "subjects": "Maths, Science, Biology, Chemistry",
+                "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+            },
+            {
+                "name": "Maths tutor 3",
+                "primary": "BA Human Sciences 2:1 - Oxford",
+                "subjects": "Maths, Science, Biology, Chemistry",
+                "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+            }                                    
+        ],
+        "benefits":[{"text":"Initial and continual assessment throughout"}, 
+            {"text":"1-to-1, home, online and group lessons available"}, 
+            {"text":"Selected tutor network available across the UK"},
+            {"text":"Experienced tutors from KS1 through to IB and University levels"}
+        ],
+        "enquiry": {
+            "text":"Maths study can be a challenge at the best of times. Many students – even those with good grades in other subjects – struggle to find their ‘eureka’ moment. Often they just need additional support. But as a parent you know how hard it can be juggling busy lives with homework, and still finding quality time for family. Fleet Tutors can help."
+        },
+        "testimonials":[]        
+    },
+    "humanities":{
+        "header":{"url":"https://images.pexels.com/photos/1329295/pexels-photo-1329295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+        "overview":{ "text":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively, you’re finding that they are struggling to keep pace with their peers – Fleet Tutors can assist in finding and arranging the most suitable tutor for your requirements." }
+        , "structure": {
+            "content": [{"text":"Applied Maths"}, {"text":"Decision Maths"}, {"text":"Discrete Maths"}, {"text":"Further Maths"}, {"text":"Mechanics"}, {"text":"Pure Maths"}, {"text":"Statistics"}, {"text":"11+"}, {"text":"GCSE's"}, {"text":"A-Levels"}]
+        },
+        "tutors":[
+            {
+                "name": "James May",
+                "primary": "BA Mathematics 2:1 - Oxford",
+                "subjects": "Maths, Biology, Chemistry",
+                "profile": "Graduated in 2019 with a degree in Mathematics whilst at my Oxford. I have 10 years of experience."
+            },
+            {
+                "name": "Maths tutor 2",
+                "primary": "BA Human Sciences 2:1 - Oxford",
+                "subjects": "Maths, Science, Biology, Chemistry",
+                "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+            },
+            {
+                "name": "Maths tutor 3",
+                "primary": "BA Human Sciences 2:1 - Oxford",
+                "subjects": "Maths, Science, Biology, Chemistry",
+                "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+            }                                    
+        ],
+        "benefits":[{"text":"Initial and continual assessment throughout"}, 
+            {"text":"1-to-1, home, online and group lessons available"}, 
+            {"text":"Selected tutor network available across the UK"},
+            {"text":"Experienced tutors from KS1 through to IB and University levels"}
+        ],
+        "enquiry": {
+            "text":"Maths study can be a challenge at the best of times. Many students – even those with good grades in other subjects – struggle to find their ‘eureka’ moment. Often they just need additional support. But as a parent you know how hard it can be juggling busy lives with homework, and still finding quality time for family. Fleet Tutors can help."
+        },
+        "testimonials":[]        
+    },
+    "psychology":{
+        "header":{"url":"https://images.pexels.com/photos/1329295/pexels-photo-1329295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+        "overview":{ "text":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively, you’re finding that they are struggling to keep pace with their peers – Fleet Tutors can assist in finding and arranging the most suitable tutor for your requirements." }
+        , "structure": {
+            "content": [{"text":"Applied Maths"}, {"text":"Decision Maths"}, {"text":"Discrete Maths"}, {"text":"Further Maths"}, {"text":"Mechanics"}, {"text":"Pure Maths"}, {"text":"Statistics"}, {"text":"11+"}, {"text":"GCSE's"}, {"text":"A-Levels"}]
+        },
+        "tutors":[
+            {
+                "name": "James May",
+                "primary": "BA Mathematics 2:1 - Oxford",
+                "subjects": "Maths, Biology, Chemistry",
+                "profile": "Graduated in 2019 with a degree in Mathematics whilst at my Oxford. I have 10 years of experience."
+            },
+            {
+                "name": "Maths tutor 2",
+                "primary": "BA Human Sciences 2:1 - Oxford",
+                "subjects": "Maths, Science, Biology, Chemistry",
+                "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+            },
+            {
+                "name": "Maths tutor 3",
+                "primary": "BA Human Sciences 2:1 - Oxford",
+                "subjects": "Maths, Science, Biology, Chemistry",
+                "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+            }                                    
+        ],
+        "benefits":[{"text":"Initial and continual assessment throughout"}, 
+            {"text":"1-to-1, home, online and group lessons available"}, 
+            {"text":"Selected tutor network available across the UK"},
+            {"text":"Experienced tutors from KS1 through to IB and University levels"}
+        ],
+        "enquiry": {
+            "text":"Maths study can be a challenge at the best of times. Many students – even those with good grades in other subjects – struggle to find their ‘eureka’ moment. Often they just need additional support. But as a parent you know how hard it can be juggling busy lives with homework, and still finding quality time for family. Fleet Tutors can help."
+        },
+        "testimonials":[]        
+    }    
+
+
+
+
+}
+

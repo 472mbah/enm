@@ -1,0 +1,165 @@
+/* FreePik is source for social media icons: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */
+
+#start-float-header {
+    position: -webkit-sticky; /*Safari & IE*/
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+#grey-header button {
+    border: none;
+    outline: none;
+}
+
+#grey-header {
+    width: 70%;
+    background-color: #fff;
+    width: calc(100%-1em);
+    padding: 0.8em 1em;
+    height: fit-content;
+    display: flex;
+    /* grid-template-columns: repeat(7, 1fr); */
+    gap: 1em;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+
+
+
+#grey-header #social-icons-container, #pages-container {
+    display: flex;
+    gap: 0.8em;
+    align-items: center;
+}
+
+
+#grey-header #social-icons-container img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#grey-header #social-icons-container img:hover {
+    opacity: 1;
+}
+
+.nav-bar-button  {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    height: fit-content;
+    background: none;
+    border: none;
+    outline: none;
+    color: rgba(0, 100, 200, 0.7);
+    cursor: pointer;
+    background: none;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.nav-bar-button:hover {
+    color: rgba(0, 100, 200, 1);
+}
+
+.nav-bar-container {
+    height: 20px;
+    background-color: none;
+    /* margin: 1em; */
+    /* position: absolute; */
+    z-index: 10;
+}
+
+
+
+
+
+#main-header {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 10fr auto;
+    gap: 1em;
+    padding: 1em;
+    align-items: center;
+    height: fit-content;
+    background: #FFFFFF;
+    border-bottom: 3px solid #EEEEEE;
+    box-sizing: border-box;
+}
+
+#grey-header #logo {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    /* line-height: 105px; */
+    letter-spacing: 0.015em;
+    color: rgba(0, 100, 200, 0.7);
+}
+
+
+
+#big-purple {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 10px;
+    background: #495DFF;
+    color: #fff;
+    opacity: 1;
+}
+
+
+
+
+
+.drop-down-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* border-radius: 10px; */
+    gap: 0.5em;
+    background: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    transition: height 2s;
+}
+
+.drop-down-container button {
+    cursor: pointer;
+    font-weight: 500;
+    color: rgba(0, 100, 200, 0.7);
+    background:none;
+    padding: 1em 1.5em;
+    width: 100%;
+}
+
+.drop-down-container button:hover {
+    background: rgba(0, 100, 250, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.menu_section_contain {
+    width: fit-content;
+}
+
+.menu-parent {
+    position: relative;
+
+}
+
+
+#fill {
+    height: 10px;
+}

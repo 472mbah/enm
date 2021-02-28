@@ -1,0 +1,70 @@
+.lds-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.1em;
+  /* position: relative; */
+  /* width: 50px; */
+  /* height: 50px; */
+}
+.lds-grid div {
+  /* position: absolute; */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0, 100, 200, 0.7);
+  animation: lds-grid 1.2s linear infinite;
+  
+}
+.lds-grid div:nth-child(1) {
+  top: 8px;
+  left: 8px;
+  animation-delay: 0s;
+}
+.lds-grid div:nth-child(2) {
+  top: 8px;
+  left: 1.5em;
+  animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(3) {
+  top: 8px;
+  left: 2.5em;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(4) {
+  top: 1.5em;
+  left: 8px;
+  animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(5) {
+  top: 1.5em;
+  left: 1.5em;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(6) {
+  top: 1.5em;
+  left: 2.5em;
+  animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(7) {
+  top: 2.5em;
+  left: 8px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(8) {
+  top: 2.5em;
+  left: 1.5em;
+  animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(9) {
+  top: 2.5em;
+  left: 2.5em;
+  animation-delay: -1.6s;
+}
+@keyframes lds-grid {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

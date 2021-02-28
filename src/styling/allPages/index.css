@@ -1,0 +1,164 @@
+.page-main {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 100%;
+    position: relative;
+}
+
+
+hr {
+    background-color: #f3f3f3;
+    border: 0.5px solid #f3f3f3;
+}
+
+.details-box {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f3f3f3;
+    gap: 1em;
+    width: fit-content;
+    /* border-radius: 10px; */
+    padding: 1em;
+}
+
+
+.details-box:hover {
+    box-shadow: 0px 0px 8px #eee;
+    cursor: pointer;
+}
+
+.user-image {
+    border: 1.5px solid #bbb;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    
+}
+
+.personal-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.tutors-collection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    width: 100%;
+}
+
+.content-container-subjects {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.content-container-subjects ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.content-container-subjects ul li {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.content-container-subjects ul li:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+.option-box {
+    border: 1px solid #f3f3f3;
+    width: fit-content;
+    padding: 1em;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.option-box:hover {
+    box-shadow: 0px 0px 10px #eee;
+}
+
+.option-collection {
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    gap: 1em;
+    width: 100%;
+}
+
+.overview-section  {
+    /* background: linear-gradient(162.06deg, rgba(79, 232, 204, 0.9) 15.46%, rgba(221, 222, 163, 0.9) 87.77%);; */
+    /* background-color: #bbb; */
+    /* padding: 1em; */
+    /* position: sticky;
+    top: 10px; */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-family: Roboto;
+
+
+}
+
+.header {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 40px;
+    /* color: rgba(0, 100, 200, 0.7) */
+}
+
+.overview-section p {
+    color: rgba(0, 0, 0, 0.7)
+}
+
+
+
+.sub-header {
+    font-size: 25px;
+}
+
+.sub-beta-header {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+}
+
+.main-text {
+
+    color: rgba(0, 0, 0, 0.7)
+
+}
+
+
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+
+.page-header p {
+    color:rgba(255, 255, 255, 1);
+    margin: 1em;
+}
+
+#black-grey-out {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    /* padding: 1em; */
+}
+
+.subject-image {
+    object-fit: cover;
+    width: 100%;
+    height: 60px;
+
+}

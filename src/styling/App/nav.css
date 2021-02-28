@@ -1,0 +1,125 @@
+#nav-header {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    position: fixed;
+    z-index: 3;
+}
+
+#nav-header-inner {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-header-inner #logo-text {
+    font-family: 'Fredoka One', cursive;
+    opacity: 70%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#nav-header-inner #logo-text:hover {
+    opacity: 1;
+}
+
+#nav-navigation  {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.navbar-section-container {
+    padding: 0.5em;
+    transition: 0.5s;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar-section-tab-name {
+    font-family: 'Fredoka One', cursive;
+    padding: 0.5em;
+    transition: 0.5s;
+    cursor: pointer;
+    position: relative;
+}
+
+
+
+.navbar-section-container:hover {
+    border-radius: 10px;
+    background-color: #f3f3f3;
+}
+
+.options-section {
+    /* position: fixed; */
+    /* top: 80px; */
+    margin-top: 25px;
+    /* margin-left: -10%; */
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    border-top: 5px solid red;
+    background: #fff;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
+    width: fit-content;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.options-section p:hover {
+    color: red;
+    font-weight: 700;
+}
+
+.options-section p {
+    padding: 0.2em 0;
+
+}
+
+
+#nav-dash-contain {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#nav-dash-contain hr {
+    background-color: #f3f3f3;
+    border: 1px solid #f3f3f3;
+}
+
+#nav-meta {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    justify-content:flex-end;
+    width: 100%;
+
+}
+
+#nav-meta button {
+    padding: 0.6em;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer; 
+    font-family: 'Fredoka One', cursive;
+    transition: 0.3s;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 1em;
+}
+
+#nav-meta button:hover {
+    background-color: #BCCADA;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+}

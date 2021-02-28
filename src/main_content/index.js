@@ -55,9 +55,12 @@ export const Registration = () => {
     return (<form id="registration-frame">
         <div className="container">
             <h1>Sign Up</h1>
+            <div id="container-first">
+                <button type="button" className="small_button" id="access_button">Login instead</button>
+                <button onClick={()=>dispatch({type:"TOGGLE_COVER"})} type="button" className="small_button" id="cancel_button">Cancel</button>
+            </div>
             <p id="introduction-text">Want to sign up, fill out this form!</p>            
         </div>
-        <hr/>
         <div className="container">
 
 
@@ -73,12 +76,11 @@ export const Registration = () => {
                 <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
                 <button type="submit" id="register_button">Register</button>
-                <button onClick={()=>dispatch({type:"TOGGLE_COVER"})} id="cancel_button">Cancel</button>
+                {/* <button onClick={()=>dispatch({type:"TOGGLE_COVER"})} id="cancel_button">Cancel</button> */}
 
     
         </div>
 
-          {/* <button >dfgdfgd</button> */}
 
     </form>)
 }

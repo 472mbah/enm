@@ -1,6 +1,6 @@
 {
     
-    "0":{
+    "2":{
         "name":"Subjects",
         "options":[
         {"text":"Maths","url":"/subjects/maths"},
@@ -30,9 +30,9 @@
         "link":"/jobs",
         "options":[]
     },
-    "2":{
-        "name": "home",
-        "link":"/jobs",
+    "0":{
+        "name": "Home",
+        "link":"/home",
         "options":[]
     },   
     "5":{

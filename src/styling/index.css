@@ -28,19 +28,7 @@ body {
     overflow: auto;
 }
 
-#big-cover {
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    /* background-color: rgba(0, 0, 0, 0.8); */
-    background: linear-gradient(162.06deg, rgba(79, 232, 204, 0.9) 15.46%, rgba(221, 222, 163, 0.9) 87.77%);;
-    /* opacity: 0.6; */
-    z-index: 2;
-    transition: 0.3s;
-    display: flex;
-    justify-content: center;        
-    align-items: center;
-}
+
 
 #show_blur {
     filter: blur(4px);

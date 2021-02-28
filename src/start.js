@@ -18,6 +18,12 @@ export const Main = () => {
         big_cover ? <div id="big-cover">
           
           <Registration/>
+            <div id="progress-container">
+                <div style={{background:"rgba(255,145,0, 0.2)"}}></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
 
         </div> : null
       }

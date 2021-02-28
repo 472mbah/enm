@@ -1,5 +1,16 @@
+@font-face {
+    font-family: sfb;
+    src: url(./fonts/sfb.ttf);
+}
+
+@font-face {
+    font-family: sfr;
+    src: url(./fonts/sfr.ttf);
+}
+  
+
 * {
-    font-family: Roboto, 'Times New Roman', Times, serif;    
+    font-family: sfr ,Roboto, 'Times New Roman', Times, serif;    
     /* font-family: 'PT Sans', sans-serif; */
     margin: 0;
     padding: 0;

@@ -9,6 +9,7 @@
     background: #fff;
     display: flex;
     justify-content:space-evenly;
+    border-bottom: 1.5px solid #ddd;
 }
 
 #grey-header button {
@@ -18,7 +19,6 @@
 
 #grey-header {
     width: 70%;
-    background-color: #fff;
     width: calc(100%-1em);
     padding: 0.8em 1em;
     height: fit-content;
@@ -53,7 +53,7 @@
 }
 
 .nav-bar-button  {
-    font-family: Roboto;
+    /* font-family: Roboto; */
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -98,7 +98,7 @@
 }
 
 #grey-header #logo {
-    font-family: Roboto;
+    /* font-family: Roboto; */
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -110,7 +110,7 @@
 
 
 #big-purple {
-    font-family: Roboto;
+    /* font-family: Roboto; */
     font-style: normal;
     font-weight: 500;
     font-size: 20px;

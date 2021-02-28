@@ -100,7 +100,7 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    font-family: Roboto;
+    /* font-family: Roboto; */
 
 
 }

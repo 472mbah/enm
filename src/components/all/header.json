@@ -17,16 +17,7 @@
         {"text":"Why MH","url":"/mh/why"},
         {"text":"Types of MH","url":"/mh/types"}
     ]},
-    "2":{
-        "name":"Exams",
-        "options":[
-        {"text":"Maths","url":"/exams/maths"},
-        {"text":"English","url":"/exams/english"},
-        {"text":"Science","url":"/exams/science"},
-        {"text":"Languages","url":"/exams/languages"},
-        {"text":"Humanities","url":"/exams/humanities"},
-        {"text":"Psychology","url":"/exams/psychology"}
-    ]},
+
     "3":{
         "name":"Tutors",
         "options":[
@@ -38,5 +29,20 @@
         "name": "Jobs",
         "link":"/jobs",
         "options":[]
-    }
+    },
+    "2":{
+        "name": "home",
+        "link":"/jobs",
+        "options":[]
+    },   
+    "5":{
+        "name":"Exams",
+        "options":[
+        {"text":"Maths","url":"/exams/maths"},
+        {"text":"English","url":"/exams/english"},
+        {"text":"Science","url":"/exams/science"},
+        {"text":"Languages","url":"/exams/languages"},
+        {"text":"Humanities","url":"/exams/humanities"},
+        {"text":"Psychology","url":"/exams/psychology"}
+    ]}     
 }

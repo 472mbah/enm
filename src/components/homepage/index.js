@@ -20,7 +20,7 @@ export const Introduction = () => {
             We offer one-to-one help to students in the UK lessons so they can understand the world around them better.
             </p>
 
-            <button onClick={()=>dispatch({type:"TOGGLE_COVER"})} id="start-now">Start now</button>
+            <button onClick={()=>dispatch({type:"TOGGLE_COVER", to:0})} id="start-now">Start now</button>
 
         </div>
 

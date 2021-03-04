@@ -1,6 +1,11 @@
+#big-cover-container {
+    width: 100%;
+
+}
+
 #big-cover {
     height: 100%;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0px;
     /* background-color: rgba(0, 0, 0, 0.8); */
@@ -8,7 +13,7 @@
     /* opacity: 0.6; */
     backdrop-filter: blur(5px);
     
-    z-index: 2;
+    z-index: 10;
     transition: 0.3s;
     display: flex;
     flex-direction: column;
@@ -16,6 +21,8 @@
     justify-content: center;        
     align-items: center;
 }
+
+
 
 #main-content {
     width: 100%;
@@ -113,7 +120,7 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-input[type=text], input[type=password] {
+input, textarea {
     padding: 10px;
     margin: 5px 0 10px 0;
     display: inline-block;
@@ -121,10 +128,14 @@ input[type=text], input[type=password] {
     border: 2px solid #ddd;
     font-size: 18px;
     transition: 0.3s;
+}
 
+textarea {
+    resize: none;
+    height: 8em;
 }
   
-input[type=text]:focus, input[type=password]:focus {
+input:focus, textarea:focus {
     background-color: #fff;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
     border: 2px solid #fff;
@@ -225,13 +236,16 @@ input[type=text]:focus, input[type=password]:focus {
     display: flex;
     flex-direction: row;
     gap: 1em;
+    width: 100%;
+    justify-content: center;
 }
 
 #progress-container div {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    margin-bottom: 0.5em;
 }
 
 #progress-container div:hover {

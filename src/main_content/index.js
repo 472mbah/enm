@@ -46,6 +46,41 @@ export const Home = () => {
     )    
 }
 
+export const Query = () => {
+
+    const dispatch = useDispatch();
+
+
+    return (<form id="registration-frame">
+        <div className="container">
+            <h1>Queries</h1>
+            <div id="container-first">
+                <button onClick={()=>dispatch({type:"TOGGLE_COVER", to:0})} type="button" className="small_button" id="access_button">Register</button>
+                <button onClick={()=>dispatch({type:"TOGGLE_COVER"})} type="button" className="small_button" id="cancel_button">Cancel</button>
+            </div>
+            <p id="introduction-text">Want to get in touch, send us a quick message</p>            
+        </div>
+        <div className="container">
+
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email (optional)" name="email" id="email" required/>
+
+                <label for="psw"><b>Telephone</b></label>
+                <input type="password" placeholder="Enter Phone number (optional)" name="psw" id="psw" required/>
+
+                <label for="psw-repeat"><b>Repeat </b></label>
+                <textarea type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required/>
+                <hr/>
+
+                <button type="submit" id="register_button">Send Query</button>
+
+    
+        </div>
+
+
+    </form>)
+}
 
 export const Registration = () => {
 
@@ -77,7 +112,12 @@ export const Registration = () => {
 
                 <button type="submit" id="register_button">Register</button>
                 {/* <button onClick={()=>dispatch({type:"TOGGLE_COVER"})} id="cancel_button">Cancel</button> */}
-
+                <div id="progress-container">
+                    <div style={{background:"rgba(255,145,0, 0.2)"}}></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
     
         </div>
 

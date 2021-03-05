@@ -256,7 +256,7 @@ input:focus, textarea:focus {
 }
 
 .small_button {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
     border: none;
     padding: 0.5em;
@@ -273,7 +273,17 @@ input:focus, textarea:focus {
 }
 
 .small_button:hover {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 1);
+}
+
+#search_button {
+    border: 1.5px solid rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#smaller_button {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7);
 }
 
 #container-first {

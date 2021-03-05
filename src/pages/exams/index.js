@@ -4,6 +4,9 @@ import data from './content.json';
 import { CombineTest } from '../../components/homepage'
 import { useEffect, useState } from 'react';
 import { PageHeader } from '../../main_content/pageHeader';
+import search from '../../styling/icons/search.png';
+import more from '../../styling/icons/more.svg';
+
 import {
     useLocation,
     useParams
@@ -26,9 +29,6 @@ export const PageGenerator = () => {
         else 
             changeSubject('maths')
 
-            // failed = true;
-
-
     }, [location]);
 
 
@@ -37,37 +37,38 @@ export const PageGenerator = () => {
     return(
         <div className="page-main">
 
+            {/* <PageHeader url={data[subject].header.url} subject={subject}/> */}
+            {/* <hr/> */}
+
+            <Search/>
+
             {/* <div id="page-index-container-main"> */}
                 <PageIndex/>
             {/* </div> */}
+            
 
-
-            <PageHeader url={data[subject].header.url} subject={subject}/>
             <hr/>
             <Introduction subject={subject}/>
             <hr/>
-            {/* <Boards subject={subject}/> */}
+            <Mapper subject={subject} area="boards" name="Boards"/>
             <hr/>
-            {/* <TutorsCollection subject={subject}/> */}
+            <Mapper subject={subject} area="levels" name="Levels"/>
             <hr/>
-            {/* <Benefits subject={subject}/> */}
-            <hr/>
-            {/* <Enquire subject={subject}/> */}
-            <hr/>
-            {/* <CombineTest no_border={true}/> */}
+            <Papers/>
+
         </div>)
 } 
 
-export const Boards = ({subject}) => {
+export const Mapper = ({subject, area, name}) => {
 
 
     return (
-        <div id="boards-section" className="content-container-subjects">
-            <p className="header">Structure</p>
+        <div id={area+"-section"} className="content-container-subjects">
+            <p className="header">{name}</p>
 
             <div className="tutors-collection">
                 {
-                    data[subject].boards.content.map(item=>
+                    data[subject][area].content.map(item=>
 
                             <Qualif details={item}/>
                         
@@ -81,93 +82,59 @@ export const Boards = ({subject}) => {
 
 }
 
-export const Benefits = ({subject}) => {
+const Search = () => {
+
+    const [text, setText] = useState("");
 
     return (
-        <div id="benefits-section" className="content-container-subjects">
-            <p className="header">Benefits</p>
-
-            <ul>
-                {
-                    data[subject].benefits.map(({text}, i)=>
-                            <li key={i}>{text}</li>
-                        )
-                }
-            </ul>
-
-        </div>
-    )
-
-}
-
-export const TutorsCollection = ({subject}) => {
-
-    return (
-        <div id="tutors-section" className="content-container-subjects">
-            <p className="header">Tutors</p>
-
-            <div className="tutors-collection">
-            
-
-                {
-                    data[subject].tutors.map(item=>
-
-                            <Tutors details={item}/>
-                        
-                        )
-                }
-
+        <div id="search-container">
+            <div>
+                <img src={search}/>
+                <input onChange={e=>setText(e.target.value)} value={text} placeholder="Search For Exam Papers"/>
             </div>
+
+            <div>
+                <button  disabled={text.length==0} type="button" className="small_button" id="search_button">Search</button>
+                <button  type="button" className="small_button" id="access_button">Filters</button>
+            </div>
+
+        </div>
+    )
+}
+
+const Papers = () => {
+
+    const items = []
+
+    for (let k = 0; k < 20; k++) {
+      items.push(<li className="paper-container" key={k}>
+
+          <p>Mathematics Paper {k+1}</p>
+
+          <div className="right-section">
+            <p className="board-name">Edexcel</p>
+            {/* <img src={more}/> */}
+            <button  type="button" className="small_button" id="search_button">View</button>
+            <button  type="button" className="small_button" id="search_button">Download</button>
+
+          </div>
+
+      </li>)
+    }
+
+    return (
+        <div id={"papers-section"} className="content-container-subjects">
+            <p className="header">Papers</p>
+            <ul>
+                {items}
+            </ul>
         </div>
     )
 
 }
 
-export const Tutors = ({details}) => {
-
-    const { primary, subjects, profile, name } = details;
 
 
-    return (<div className="details-box">
-        
-        <div className="personal-box">
-
-            <div className="user-image"></div>
-            <p className="main-text">{name}</p>
-
-        </div>
-
-
-        <div>
-            <p className="sub-beta-header">Primary Qualifications</p>
-            <p className="main-text">{primary}</p>
-        </div>
-        <div>
-            <p className="sub-beta-header">Subjects</p>
-            <p className="main-text">{subjects}</p>
-        </div>
-        <div>
-            <p className="sub-beta-header">Profile</p>
-            <p className="main-text">{profile}</p>
-        </div>        
-
-        <button className="inner_button">More</button>
-
-    </div>)
-
-} 
-
-export const Option = ({details}) => {
-
-    const { name } = details;
-
-    return (<div className="option-box">
-        
-        <h2>{name}</h2>
-
-    </div>)
-
-} 
 
 export const Qualif = ({details}) => {
 
@@ -205,10 +172,8 @@ export const PageIndex = () => {
         <div id="page-index-container">
             <button onClick={()=>onClick("overview-section")}>Overview</button>
             <button onClick={()=>onClick("boards-section")}>Boards</button>
-            <button onClick={()=>onClick("tutors-section")}>Tutors</button>
-            <button onClick={()=>onClick("benefits-section")}>Benefits</button>
-            <button onClick={()=>onClick("enquiry-section")}>Enquiries</button>
-            <button onClick={()=>onClick("testimonial-section")}>Testimonials</button>
+            <button onClick={()=>onClick("levels-section")}>Levels</button>
+            <button onClick={()=>onClick("papers-section")}>Papers</button>
         </div>
     )
 }

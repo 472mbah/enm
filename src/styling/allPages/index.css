@@ -158,5 +158,70 @@ hr {
     object-fit: cover;
     width: 100%;
     height: 60px;
+}
 
+#search-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5em 0;
+    border-bottom: 1.5px solid #ddd;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#search-container div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+#search-container input {
+    border: none;
+    box-shadow: none;
+    margin: none;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 0
+}
+
+#search-container img {
+    height: 20px;
+    opacity: 50%
+}
+
+.paper-container {
+    
+    padding: 0.5em 1em;
+    background: #f3f3f3;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.8;
+    border: 1.5px solid #fff;
+    cursor: pointer;
+    align-items: center;
+
+}
+
+.paper-container:hover {
+    opacity: 1;
+    background: #fff;
+    box-shadow: 10px 0px 0px #f3f3f3;
+    border: 1.5px solid #f3f3f3;
+    box-sizing:border-box;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+}
+
+.paper-container img {
+    height: 1.5em;
+}
+
+.paper-container .board-name {
+    font-weight: 700;
 }

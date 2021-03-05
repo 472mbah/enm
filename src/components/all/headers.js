@@ -4,7 +4,6 @@ import facebook from '../../styling/icons/facebook.png';
 import youtube from '../../styling/icons/youtube.png';
 import linkedin from '../../styling/icons/linkedin.png';
 import twitter from '../../styling/icons/twitter.png';
-import search from '../../styling/icons/search.png';
 import { Loading } from '../loading';
 import data from './header.json';
 import { BrowserRouter as Router, useLocation, Route, Link, useHistory  } from "react-router-dom";

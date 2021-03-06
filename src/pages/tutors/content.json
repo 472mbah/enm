@@ -1,0 +1,46 @@
+{
+    "overview":{
+        "text":"Established in 1977, Fleet Tutors has over 40 years’ experience helping young people of all abilities achieve their academic goals,  from school entrance exams to securing their first place at university.  Our approach is personal and highly tailored with experienced consultants who look after your educational needs from the initial assignment brief and tutor placement until the desired academic results are achieved.  We cover all academic subjects, exams and levels from primary, school entrance exams (7/8+. 11+, 13+ and 16+), GCSE, A-level, IB, Pre-U, university level and beyond.  Our tutors come to your home at a time that is convenient for you and your child, whether after school or on the weekend.  We also provide residential and more fulltime tutors when needed and work with international and university students online.For further information please contact 0333 920 4880. You can also arrange tuition by requesting a call back from our experienced consultants using the online enquiry form."
+    },
+    "enquiry": {
+        "text":"Maths study can be a challenge at the best of times. Many students – even those with good grades in other subjects – struggle to find their ‘eureka’ moment. Often they just need additional support. But as a parent you know how hard it can be juggling busy lives with homework, and still finding quality time for family. Fleet Tutors can help."
+    },
+    "tutors":[
+        {
+            "name": "James May",
+            "primary": "BA Mathematics 2:1 - Oxford",
+            "subjects": "Maths, Biology, Chemistry",
+            "profile": "Graduated in 2019 with a degree in Mathematics whilst at my Oxford. I have 10 years of experience."
+        },
+        {
+            "name": "Maths tutor 2",
+            "primary": "BA Human Sciences 2:1 - Oxford",
+            "subjects": "Maths, Science, Biology, Chemistry",
+            "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+        },
+        {
+            "name": "Maths tutor 3",
+            "primary": "BA Human Sciences 2:1 - Oxford",
+            "subjects": "Maths, Science, Biology, Chemistry",
+            "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+        },   
+        {
+            "name": "James May",
+            "primary": "BA Mathematics 2:1 - Oxford",
+            "subjects": "Maths, Biology, Chemistry",
+            "profile": "Graduated in 2019 with a degree in Mathematics whilst at my Oxford. I have 10 years of experience."
+        },
+        {
+            "name": "Maths tutor 2",
+            "primary": "BA Human Sciences 2:1 - Oxford",
+            "subjects": "Maths, Science, Biology, Chemistry",
+            "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+        },
+        {
+            "name": "Maths tutor 3",
+            "primary": "BA Human Sciences 2:1 - Oxford",
+            "subjects": "Maths, Science, Biology, Chemistry",
+            "profile": "Will graduated from the University of Oxford in 2019 with a degree in Hu... "
+        }                                            
+    ]
+}

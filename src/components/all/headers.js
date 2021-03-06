@@ -52,24 +52,24 @@ export const GreyHeader = () => {
 }
 
 
-
-
-
-
-
 const MenuUnit = ({ index }) => {
     
     const [hover, setHover] = useState(false);
 
-    const { name, options } = data[index];
+    const { name, options, link } = data[index];
     const single = data[index].hasOwnProperty("link");
-    
-    
+
     return( 
     
     <div className={`nav-bar-container`} onMouseOver={()=>setHover(true)} onMouseLeave={()=>setHover(false)} >
         
-        <button className={`nav-bar-button`} >{name}</button>
+        {
+            single ? 
+                <Link to={link}><button  className={`nav-bar-button`} >{name}</button></Link>
+            : <button className={`nav-bar-button`} >{name}</button>
+        }
+
+        
             {
                 hover? <div id="fill"></div> : null
             }

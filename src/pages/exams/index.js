@@ -40,7 +40,7 @@ export const PageGenerator = () => {
             {/* <PageHeader url={data[subject].header.url} subject={subject}/> */}
             {/* <hr/> */}
 
-            <Search/>
+            <Search placeholder="Exam Papers"/>
 
             {/* <div id="page-index-container-main"> */}
                 <PageIndex/>
@@ -54,7 +54,7 @@ export const PageGenerator = () => {
             <hr/>
             <Mapper subject={subject} area="levels" name="Levels"/>
             <hr/>
-            <Papers/>
+            <Papers subject={subject}/>
 
         </div>)
 } 
@@ -82,7 +82,7 @@ export const Mapper = ({subject, area, name}) => {
 
 }
 
-const Search = () => {
+export const Search = ({placeholder}) => {
 
     const [text, setText] = useState("");
 
@@ -90,7 +90,7 @@ const Search = () => {
         <div id="search-container">
             <div>
                 <img src={search}/>
-                <input onChange={e=>setText(e.target.value)} value={text} placeholder="Search For Exam Papers"/>
+                <input onChange={e=>setText(e.target.value)} value={text} placeholder={"Search For "+placeholder}/>
             </div>
 
             <div>
@@ -102,14 +102,14 @@ const Search = () => {
     )
 }
 
-const Papers = () => {
+const Papers = ({subject}) => {
 
     const items = []
 
     for (let k = 0; k < 20; k++) {
       items.push(<li className="paper-container" key={k}>
 
-          <p>Mathematics Paper {k+1}</p>
+          <p>{subject.toUpperCase()} Paper {k+1}</p>
 
           <div className="right-section">
             <p className="board-name">Edexcel</p>

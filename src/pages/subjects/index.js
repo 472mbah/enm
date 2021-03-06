@@ -48,7 +48,7 @@ export const PageGenerator = () => {
             <hr/>
             <Structure subject={subject}/>
             <hr/>
-            <TutorsCollection subject={subject}/>
+            <TutorsCollection tutors={data[subject].tutors}/>
             <hr/>
             <Benefits subject={subject}/>
             <hr/>
@@ -100,24 +100,18 @@ export const Benefits = ({subject}) => {
 
 }
 
-export const TutorsCollection = ({subject}) => {
+export const TutorsCollection = ({tutors}) => {
+
+
 
     return (
         <div id="tutors-section" className="content-container-subjects">
             <p className="header">Tutors</p>
-
+        
             <div className="tutors-collection">
-            
-
-                {
-                    data[subject].tutors.map(item=>
-
-                            <Tutors details={item}/>
-                        
-                        )
-                }
-
+                {tutors.map(item=><Tutors details={item}/>)}
             </div>
+
         </div>
     )
 

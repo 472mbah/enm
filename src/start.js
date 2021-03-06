@@ -10,6 +10,9 @@ import { Introduction, Categories, Testemonials } from './components/homepage/in
 import { BrowserRouter as Router, useLocation, Route, Link, useHistory  } from "react-router-dom";
 import { PageGenerator as Pgs } from './pages/subjects';
 import { PageGenerator as Pge } from './pages/exams';
+import { PageGenerator as Abo } from './pages/about';
+import { PageGenerator as Tut } from './pages/tutors';
+import { PageGenerator as Jbs } from './pages/jobs';
 
 const duration = 300;
 
@@ -69,6 +72,9 @@ const MainBody = () => {
                 <Route exact path="/enm" component={HomePage} />
                 <Route exact path="/subjects/:id" component={Pgs}  />
                 <Route exact path="/exams/:id" component={Pge}  />
+                <Route exact path="/about" component={Abo}  />
+                <Route exact path="/tutors" component={Tut}  />
+                <Route exact path="/jobs" component={Jbs}  />
             </div>
         </div>
     )

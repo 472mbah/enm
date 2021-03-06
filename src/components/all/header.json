@@ -19,12 +19,9 @@
     ]},
 
     "3":{
+        "link":"/tutors",
         "name":"Tutors",
-        "options":[
-        {"text":"1-1","url":"/tutors/1_1"},
-        {"text":"Home","url":"/tutors/from_home"},
-        {"text":"Home","url":"/tutors/online"}
-    ]},
+        "options":[]},
     "4":{
         "name": "Jobs",
         "link":"/jobs",
@@ -32,7 +29,7 @@
     },
     "0":{
         "name": "Home",
-        "link":"/home",
+        "link":"/enm",
         "options":[]
     },   
     "5":{

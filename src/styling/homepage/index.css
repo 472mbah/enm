@@ -11,11 +11,11 @@
 
 
 
-#introduction-container {
+.introduction-container {
     margin-top: 2em;
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     /* flex-direction: row; */
     overflow: hidden;
     /* justify-content: space-between; */
@@ -26,22 +26,47 @@
     position: relative;
 }
 
+#portalbadge-container {
+    margin-top: 0em;
+    box-shadow: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: space-between;
+}
 
+#portalbadge-container #text-container {
+    flex: 2;
+    padding: 20px;
+}
 
-#introduction-container #text-container {
+#portalbadge-container button {
+    background: #03C1EB;
+}
+
+#portalbadge-container #intro-text-a {
+    color: #30A42E;
+}
+
+#portalbadge-container:hover {
+    box-shadow: 0px 0px 15px #eee;
+}
+
+.introduction-container #text-container {
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
 
-#introduction-container #welcome-sentence {
+.introduction-container #welcome-sentence {
     /* font-family: Roboto; */
     font-size: 20px;
     letter-spacing: 0.015em;
     color: rgba(0, 0, 0, 0.7);    
 }
 
-#introduction-container button {
+.introduction-container button {
     background-color: rgba(73, 93, 255, 0.6);
     color: #3B3F66;
     font-size: 30px;
@@ -53,23 +78,37 @@
     cursor: pointer;
 }
 
-#introduction-container button:hover {
+.introduction-container button:hover {
     background-color: rgba(73, 93, 255, 0.7);
 }
 
-#introduction-container #high-5 {
+.introduction-container #high-5 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     position: relative;
-    
 }
 
-#introduction-container #high-5 img {
+
+.introduction-container #high-5 img {
     height: 350px;
-    position: absolute;
     right: 0px;
+    position:absolute
+}
+#portal-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex: 2;
+}
+
+#portal-badge img {
+    height: 350px;
+
+    right: 0px;
+    position: absolute; 
 }
 
 .regualr-cont-main-frame {

@@ -3,12 +3,13 @@ import { useDispatch}  from 'react-redux';
 import high5 from '../../styling/icons/high_5.svg';
 import stars_ from '../../styling/icons/stars.svg';
 import arrow from '../../styling/icons/arrow.svg';
+import portal_badge from '../../styling/icons/portal_badge.svg';
 
 export const Introduction = () => {
     
     const dispatch = useDispatch();
     
-    return (<div id="introduction-container">
+    return (<div className="introduction-container">
         
         
         <div id="text-container">
@@ -28,6 +29,35 @@ export const Introduction = () => {
         <div id="high-5">
             <img src={high5}/>
         </div>
+
+    </div>)
+}
+
+export const PortalBadge = () => {
+    
+    const dispatch = useDispatch();
+    
+    return (<div id="portalbadge-container" className="introduction-container">
+        
+
+
+        <div id="text-container">
+            <p id="intro-text-a" className="intro-text">
+            Practical resources on our Portal
+            </p>
+
+            <p id="welcome-sentence">
+            Our Portals offers educational resources whenever you need them and makes communication with tutors easier.
+            </p>
+
+            <button onClick={()=>dispatch({type:"TOGGLE_COVER", to:0})} id="start-now">Try now</button>
+
+        </div>
+
+        <div id="portal-badge">
+            <img src={portal_badge}/>
+        </div>
+
 
     </div>)
 }
@@ -97,14 +127,9 @@ export const Testemonials = ({ no_border }) => {
     return (
         <div className={no_border ? "regualr-cont-main-frame-no-b":"regualr-cont-main-frame"}>
 
-            <div>
 
-            <p  id="intro-text-c" className="intro-text">
-            Quick words from our students...
-            </p>
 
-            </div>
-
+            <TesteMini dont_show_arrow={true}/>
             <TesteMini/>
 
         </div>

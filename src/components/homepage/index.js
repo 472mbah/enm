@@ -33,6 +33,28 @@ export const Introduction = () => {
     </div>)
 }
 
+export const IntroductionV2 = () => {
+    
+    const dispatch = useDispatch();
+    
+    return (<div className="introduction-containerV2">
+        
+        
+            <h1 id="intro-tag-header">
+            Smart and easy online learning, just for you.
+            </h1>
+
+            <p id="welcome-sentence">
+            We offer one-to-one help to students in the UK lessons so they can understand the world around them better.
+            </p>
+
+            <button onClick={()=>dispatch({type:"TOGGLE_COVER", to:0})} id="start-now">Start now</button>
+
+
+
+    </div>)
+}
+
 export const PortalBadge = () => {
     
     const dispatch = useDispatch();

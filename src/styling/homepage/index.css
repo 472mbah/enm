@@ -9,6 +9,46 @@
     color: #3B3F66;
 }
 
+.introduction-containerV2 {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    padding: 0em 10em;
+    align-items: center;
+    gap: 1.5em; 
+}
+
+.introduction-containerV2 h1{
+    font-size: 5em;
+    text-align: center;
+}
+
+.introduction-containerV2 #welcome-sentence{
+    font-size: 2em;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7)
+}
+
+.introduction-containerV2 #start-now{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2em;
+    padding: 10px;
+    border: 2px solid #443879;
+    color: #483699;
+    background: none;
+    border-radius: 5px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.introduction-containerV2 #start-now:hover{
+
+    border: 2px solid #443879;
+    color: #fff;
+    background: #483699;
+}
+
 
 
 .introduction-container {

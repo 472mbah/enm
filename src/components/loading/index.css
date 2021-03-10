@@ -11,7 +11,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(0, 100, 200, 0.7);
+  background: #443879;
   animation: lds-grid 1.2s linear infinite;
   
 }

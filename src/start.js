@@ -6,7 +6,7 @@ import { Registration, Query } from './main_content';
 import { GreyHeader, MainHeader } from './components/all/headers';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
-import { Introduction, Categories, Testemonials, PortalBadge } from './components/homepage/index.js';
+import { IntroductionV2, Categories, Testemonials, PortalBadge } from './components/homepage/index.js';
 import { BrowserRouter as Router, useLocation, Route, Link, useHistory  } from "react-router-dom";
 import { PageGenerator as Pgs } from './pages/subjects';
 import { PageGenerator as Pge } from './pages/exams';
@@ -96,7 +96,7 @@ const MainBody = () => {
 const HomePage = () => {
     return (
         <div id="main-body-page">
-                <Introduction/>
+                <IntroductionV2/>
                 <PortalBadge/>
                 {/* <hr className="line-break"/> */}
                 <Categories/>

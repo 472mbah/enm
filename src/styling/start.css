@@ -16,9 +16,10 @@
     width: 70%;
     /* height: 85vh; */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     position: relative;
+    margin-bottom: 2em;
     /* overflow: auto; */
 }
 

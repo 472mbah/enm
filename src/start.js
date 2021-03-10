@@ -5,7 +5,7 @@ import chat from './styling/icons/chat.svg';
 import { Registration, Query } from './main_content';
 import { GreyHeader, MainHeader } from './components/all/headers';
 import { useSelector, useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Introduction, Categories, Testemonials, PortalBadge } from './components/homepage/index.js';
 import { BrowserRouter as Router, useLocation, Route, Link, useHistory  } from "react-router-dom";
 import { PageGenerator as Pgs } from './pages/subjects';
@@ -13,6 +13,7 @@ import { PageGenerator as Pge } from './pages/exams';
 import { PageGenerator as Abo } from './pages/about';
 import { PageGenerator as Tut } from './pages/tutors';
 import { PageGenerator as Jbs } from './pages/jobs';
+import { Footer } from './components/footer';
 
 const duration = 300;
 
@@ -27,6 +28,8 @@ const transitionStyles = {
   exiting:  { opacity: 1 },
   exited:  { opacity: 1 },
 };
+//#endregion
+
 
 export const Main = () => {
 
@@ -34,6 +37,14 @@ export const Main = () => {
     const [show, setShow] = useState(false);
     const big_cover = useSelector(state => state.rootReducer.big_cover);
     const big_cover_to = useSelector(state => state.rootReducer.big_cover_index);
+    const mobile  = useSelector(state => state.rootReducer.dimensions);
+
+    useEffect(() => {
+        const handleWindowResize = () => dispatch({type:"SET_MOBILE", mobile:window.innerWidth < 500});
+        console.log(window.innerWidth);
+        window.addEventListener("resize", handleWindowResize);
+        // return () => window.removeEventListener("resize", handleWindowResize);
+      });
 
     return <div  id="start-container">
         <Transition in={big_cover} timeout={{ appear: 500, enter: 300, exit: 500,}}>
@@ -58,8 +69,9 @@ export const Main = () => {
 
         <GreyHeader/>
         <MainBody/>
+        
         <img onClick={()=>dispatch({type:"TOGGLE_COVER", to:1})} id="chat-box-button" src={chat} />
-    
+        
     </div>
     
 }
@@ -76,6 +88,7 @@ const MainBody = () => {
                 <Route exact path="/tutors" component={Tut}  />
                 <Route exact path="/jobs" component={Jbs}  />
             </div>
+            <Footer/>
         </div>
     )
 }

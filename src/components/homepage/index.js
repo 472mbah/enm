@@ -3,7 +3,7 @@ import { useDispatch}  from 'react-redux';
 import high5 from '../../styling/icons/high_5.svg';
 import stars_ from '../../styling/icons/stars.svg';
 import arrow from '../../styling/icons/arrow.svg';
-import portal_badge from '../../styling/icons/portal_badge.svg';
+import portal_badge from '../../styling/icons/portalBadge.svg';
 
 export const Introduction = () => {
     
@@ -84,20 +84,43 @@ export const PortalBadge = () => {
     </div>)
 }
 
+export const PortalBadgeV2 = () => {
+    
+    
+    return (<div className="introduction-containerV2">
+        
+        
+            <h1 id="intro-tag-header">
+            <span className="quote">"</span>Practical resources<span className="quote">"</span>
+            </h1>
+
+            <p id="welcome-sentence">
+            Our Portals offers educational resources whenever you need them and makes communication with tutors easier.</p>
+
+            <img id="pb_img" src={portal_badge}/>
+
+
+    </div>)
+}
+
 export const Categories = () => {
     return (
+        <div className="board-component-main">
+            <div className="component-header-title">Qualifications</div>
+
         <div className="regualr-cont-main-frame">
 
             <div>
 
-            <p id="intro-text-b" className="intro-text">
-            We offer a fully  personalised tutoring service for the following...
-            </p>
+            <h2 id="intro-text-b" className="intro-text">
+            We offer a fully  personalised tutoring service designed for the UK curriculum.
+            </h2>
 
             </div>
 
             <CategsMini/>
 
+        </div>
         </div>
     )
 }
@@ -126,7 +149,7 @@ const CategsMini = () => {
             background:"#DE41C5"
         },                        
     ]
-    
+    // 
     return(
         <div id="cats-mini-container">
             
@@ -134,7 +157,7 @@ const CategsMini = () => {
                 
                     <div  className="cats-mini-section">
                         
-                        <p className="cats-mini-name">{name}</p>
+                        <h3 style={{color:background}} className="cats-mini-name">{name}</h3>
                         <p style={{background}} className="cats-mini-range">{range}</p>
 
                     </div>
@@ -147,6 +170,8 @@ const CategsMini = () => {
 
 export const Testemonials = ({ no_border }) => {
     return (
+        <div className="board-component-main">
+            <div className="component-header-title">Testimonials</div>
         <div className={no_border ? "regualr-cont-main-frame-no-b":"regualr-cont-main-frame"}>
 
 
@@ -154,6 +179,7 @@ export const Testemonials = ({ no_border }) => {
             <TesteMini dont_show_arrow={true}/>
             <TesteMini/>
 
+        </div>
         </div>
     )
 }

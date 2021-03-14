@@ -285,42 +285,7 @@ input:focus, textarea:focus {
     flex-direction: row;
 }
 
-@media only screen and (min-width: 1300){
-    #big-cover {
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        top: 0px;       
-        z-index: 10;
-        transition: 0.3s;
-        position: relative;
-    }    
-    .registration-frame {
-        position: absolute;
-        top: 0;
-        max-width: 100%;
-        width: 200%;
-        height: 100%;
-        background: #fff;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
-        z-index: 3;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0.5em;
-    }
-    .container {
-        padding: 0.5em 1em;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5em;
-    }
-    #container-first {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-    }   
-}
+
 
 @media only screen and (max-width: 750px){
     #big-cover {
@@ -338,7 +303,7 @@ input:focus, textarea:focus {
         max-width: 100%;
         width: 200%;
         height: 100%;
-        background: #fff;
+        background: rgba(255, 255, 255, 0.9);
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
         z-index: 3;
         display: flex;
@@ -376,7 +341,7 @@ input:focus, textarea:focus {
         max-width: 100%;
         width: 200%;
         height: 100%;
-        background: #fff;
+        background: rgba(255, 255, 255, 0.9);
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
         z-index: 3;
         display: flex;

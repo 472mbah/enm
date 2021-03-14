@@ -51,7 +51,7 @@ export const Query = () => {
     const dispatch = useDispatch();
 
 
-    return (<form id="registration-frame">
+    return (<form className="registration-frame">
         <div className="container">
             <h1>Queries</h1>
             <div id="container-first">
@@ -87,13 +87,13 @@ export const Registration = () => {
     const dispatch = useDispatch();
 
 
-    return (<form id="registration-frame">
+    return (<form className="registration-frame">
         <div className="container">
-            <h1>Sign Up</h1>
             <div id="container-first">
                 <button type="button" className="small_button" id="access_button">Login instead</button>
                 <button onClick={()=>dispatch({type:"TOGGLE_COVER"})} type="button" className="small_button" id="cancel_button">Cancel</button>
             </div>
+            <h1>Sign Up</h1>
             <p id="introduction-text">Want to sign up, fill out this form!</p>            
         </div>
         <div className="container">

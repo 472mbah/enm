@@ -42,8 +42,8 @@ export const GreyHeader = () => {
                 <Loading/>
                 <p onClick={handleClick} id="logo">Enmaths</p>
             </div>
-            {/* <div id="pages-container"> */}
-            <div id="secondary-inner-header">
+            
+            <div id="secondary-inner-menu">
             {
                 Object.keys(data).map(k=> 
                     <div  className="menu-parent">
@@ -51,7 +51,9 @@ export const GreyHeader = () => {
                     </div>
                 )                
             }
-            <button id="big-purple">Portal</button>
+            </div>
+            <div id="secondary-inner-header">
+                <button id="big-purple">Portal</button>
             </div>
 
             </div> 
@@ -85,7 +87,7 @@ const MenuUnit = ({ index }) => {
            
 
 
-            <div style={{border: options.length>0&&hover?'1.5px solid #ddd':'none', height:hover?'auto':'0px', transition: "0.2s", overflow: hover?"auto":"hidden"}}  className="drop-down-container">
+            {/* <div style={{border: options.length>0&&hover?'1.5px solid #ddd':'none', height:hover?'auto':'0px', transition: "0.2s", overflow: hover?"auto":"hidden"}}  className="drop-down-container">
             
                 {
                     options.map(({text, url })=>
@@ -93,7 +95,7 @@ const MenuUnit = ({ index }) => {
                     )
                 }
 
-            </div>   
+            </div>    */}
 
             
 

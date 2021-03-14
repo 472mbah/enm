@@ -1,18 +1,14 @@
 #big-cover-container {
     width: 100%;
-
 }
 
 #big-cover {
     height: 100%;
-    width: 100vw;
+    width: 100%;
     position: fixed;
     top: 0px;
-    /* background-color: rgba(0, 0, 0, 0.8); */
     background: rgba(0, 0, 0, 0.5);
-    /* opacity: 0.6; */
     backdrop-filter: blur(5px);
-    
     z-index: 10;
     transition: 0.3s;
     display: flex;
@@ -82,32 +78,27 @@
     opacity: 70%;
 }
 
-#registration-frame {
-    /* font-family: 'Fira Sans', sans-serif; */
+.registration-frame {
     max-width: 25%;
-    /* height: 70vh; */
     background: #fff;
-    
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
-    /* backdrop-filter: blur(5px); */
-
     z-index: 3;
     display: flex;
     flex-direction: column;
     gap: 0.5em;
 }
 
-#registration-frame h1 {
+.registration-frame h1 {
     font-family: sfb, Roboto, cursive;
     opacity: 0.7;
 }
 
-#registration-frame #introduction-text {
+.registration-frame #introduction-text {
     /* font-family: 'Fredoka One', cursive; */
     opacity: 0.7;
 }
 
-#registration-frame .container {
+.registration-frame .container {
     padding: 0.5em 1em;
     position: relative;
     display: flex;
@@ -115,7 +106,7 @@
     gap: 0.5em;
 }
 
-#registration-frame hr, #registration-frame .container hr {
+.registration-frame hr, .registration-frame .container hr {
     border: 1px solid rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -292,4 +283,117 @@ input:focus, textarea:focus {
     top: 0px;
     display: flex;
     flex-direction: row;
+}
+
+@media only screen and (min-width: 1300){
+    #big-cover {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0px;       
+        z-index: 10;
+        transition: 0.3s;
+        position: relative;
+    }    
+    .registration-frame {
+        position: absolute;
+        top: 0;
+        max-width: 100%;
+        width: 200%;
+        height: 100%;
+        background: #fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5em;
+    }
+    .container {
+        padding: 0.5em 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    #container-first {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }   
+}
+
+@media only screen and (max-width: 750px){
+    #big-cover {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0px;       
+        z-index: 10;
+        transition: 0.3s;
+        /* position: relative; */
+    }    
+    .registration-frame {
+        /* position: absolute; */
+        /* top: 0; */
+        max-width: 100%;
+        width: 200%;
+        height: 100%;
+        background: #fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5em;
+    }
+    .container {
+        padding: 0.5em 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    #container-first {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    } 
+
+}
+
+@media only screen and (min-height: 750px){
+    #big-cover {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0px;       
+        z-index: 10;
+        transition: 0.3s;
+        /* position: relative; */
+    }    
+    .registration-frame {
+        /* position: absolute; */
+        /* top: 0; */
+        max-width: 100%;
+        width: 200%;
+        height: 100%;
+        background: #fff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5em;
+    }
+    .container {
+        padding: 0.5em 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    #container-first {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    } 
+
 }

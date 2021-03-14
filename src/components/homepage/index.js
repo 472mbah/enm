@@ -13,7 +13,7 @@ export const Introduction = () => {
         
         
         <div id="text-container">
-            <p id="intro-text-a" className="intro-text">
+            <p  className="intro-text">
             Smart and easy online learning
             </p>
 
@@ -110,13 +110,11 @@ export const Categories = () => {
 
         <div className="regualr-cont-main-frame">
 
-            <div>
 
             <h2 id="intro-text-b" className="intro-text">
             We offer a fully  personalised tutoring service designed for the UK curriculum.
             </h2>
 
-            </div>
 
             <CategsMini/>
 

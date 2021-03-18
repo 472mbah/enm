@@ -4,9 +4,9 @@ import data from './content.json';
 import { CombineTest } from '../../components/homepage'
 import { useEffect, useState } from 'react';
 import { PageHeader } from '../../main_content/pageHeader';
-import {
+import { 
     useLocation,
-    useParams
+    useParams, Link
   } from "react-router-dom";
 
 
@@ -57,6 +57,22 @@ export const PageGenerator = () => {
             <CombineTest no_border={true}/>
         </div>)
 } 
+
+export const SubjectsIntro = () => {
+
+    const subs = []
+
+    Object.keys(data).forEach((key, i)=>{
+        subs.push(<Link to={"/subjects/"+key}><p key={i}>{key.toUpperCase()}</p></Link>)
+    })
+
+    return(
+        <div className="page-main">
+            Access subjects via the link below: 
+            {subs}
+        </div>
+    )
+}
 
 export const Structure = ({subject}) => {
 

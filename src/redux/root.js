@@ -3,7 +3,7 @@ let initial = {
     page: 1,
     big_cover: false,
     big_cover_index: -1,
-    mobile: undefined
+    mobile_menu: false
 }
 
 
@@ -18,8 +18,8 @@ export const rootReducer = (state=initial, action)  => {
             state.big_cover = !state.big_cover;
             state.big_cover_index = action.to;
             return state;   
-        case "SET_MOBILE":
-            state.mobile = action.mobile
+        case "TOGGLE_MOBILE_MENU":
+            state.mobile_menu = !state.mobile_menu
             return state;         
         default: 
             return state; 

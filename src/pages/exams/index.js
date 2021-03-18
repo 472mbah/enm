@@ -6,12 +6,28 @@ import { useEffect, useState } from 'react';
 import { PageHeader } from '../../main_content/pageHeader';
 import search from '../../styling/icons/search.png';
 import more from '../../styling/icons/more.svg';
+import { Link } from 'react-router-dom';
 
 import {
     useLocation,
     useParams
   } from "react-router-dom";
 
+  export const ExamsIntro = () => {
+
+    const subs = []
+
+    Object.keys(data).forEach((key, i)=>{
+        subs.push(<Link to={"/exams/"+key}><p key={i}>{key.toUpperCase()}</p></Link>)
+    })
+
+    return(
+        <div className="page-main">
+            Access exams for subjects via the links below: 
+            {subs}
+        </div>
+    )
+}
 
 export const PageGenerator = () => {
     

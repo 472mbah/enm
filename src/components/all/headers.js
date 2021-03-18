@@ -1,38 +1,39 @@
 import '../../styling/components/header.css';
-import instagram from '../../styling/icons/instagram.png';
-import facebook from '../../styling/icons/facebook.png';
-import youtube from '../../styling/icons/youtube.png';
-import linkedin from '../../styling/icons/linkedin.png';
-import twitter from '../../styling/icons/twitter.png';
+// import instagram from '../../styling/icons/instagram.png';
+// import facebook from '../../styling/icons/facebook.png';
+// import youtube from '../../styling/icons/youtube.png';
+// import linkedin from '../../styling/icons/linkedin.png';
+// import twitter from '../../styling/icons/twitter.png';
+import mobile_option from '../../styling/icons/mobile_option.svg';
+import cross from '../../styling/icons/cross.svg';
 import { Loading } from '../loading';
-import { useSelector } from 'react-redux'; 
+import { useSelector, useDispatch } from 'react-redux'; 
 import data from './header.json';
 import { BrowserRouter as Router, useLocation, Route, Link, useHistory  } from "react-router-dom";
 import { useState } from 'react';
 
 
 
+
 export const GreyHeader = () => {
 
+    // const [menuMobile, setMenuMobile] = useState(false);
 
     const history = useHistory()
-    const mobile  = window.innerWidth;
+
+    const dispatch = useDispatch();
+    const menuMobile = useSelector(state => state.rootReducer.mobile_menu);
 
     const handleClick = () => {
-        history.push("/");
+        history.push("/enm");
     }
 
-    console.log(mobile)
 
     const [hover, setIndex] = useState(false);
 
-    const style = hover => ({
-        // zIndex: hover  ? '5' : '1',
-    })
-
 
     return (
-        <div  style={style(hover)} onMouseLeave={()=>setIndex(false)} onMouseEnter={()=>setIndex(true)}  id="start-float-header">
+        <div  onMouseLeave={()=>setIndex(false)} onMouseEnter={()=>setIndex(true)}  id="start-float-header">
             {/* {
                 mobile ? 
             } */}
@@ -43,6 +44,9 @@ export const GreyHeader = () => {
                 <p onClick={handleClick} id="logo">Enmaths</p>
             </div>
             
+            <img onClick={()=>dispatch({ type:"TOGGLE_MOBILE_MENU" })} src={menuMobile ? cross : mobile_option} id="mobile-option-icon"/>
+
+
             <div id="secondary-inner-menu">
             {
                 Object.keys(data).map(k=> 
@@ -62,6 +66,19 @@ export const GreyHeader = () => {
     )
 }
 
+export const MobileMenu = () => {
+    return (<div id="mobile-menu-container">
+            {
+                Object.keys(data).map(k=> 
+                    <div  className="menu-parent">
+                        <MenuUnitMobile index={k} />
+                    </div>
+                )                
+            }
+
+    </div>)
+    
+} 
 
 const MenuUnit = ({ index }) => {
     
@@ -97,13 +114,46 @@ const MenuUnit = ({ index }) => {
 
             </div>    */}
 
-            
-
-
-
-
-
     </div>
     )
 }
 
+const MenuUnitMobile = ({ index }) => {
+    
+    const dispatch = useDispatch();
+
+    const [hover, setHover] = useState(false);
+
+    const { name, options, link } = data[index];
+    const single = data[index].hasOwnProperty("link");
+
+    return( 
+    
+    <div className="nav-bar-container-mobile" onMouseOver={()=>setHover(true)} onMouseLeave={()=>setHover(false)} >
+        
+        {
+            single ? 
+                <Link to={link}><button onClick={()=>dispatch({ type:"TOGGLE_MOBILE_MENU" })}  className="nav-bar-button-mobile" >{name}</button></Link>
+            : <button onClick={()=>dispatch({ type:"TOGGLE_MOBILE_MENU" })} className="nav-bar-button-mobile" >{name}</button>
+        }
+
+        
+            {/* {
+                hover? <div id="fill"></div> : null
+            } */}
+           
+
+
+            {/* <div style={{border: options.length>0&&hover?'1.5px solid #ddd':'none', height:hover?'auto':'0px', transition: "0.2s", overflow: hover?"auto":"hidden"}}  className="drop-down-container">
+            
+                {
+                    options.map(({text, url })=>
+                        <Link to={url}> <button >{text}</button> </Link>
+                    )
+                }
+
+            </div>    */}
+
+    </div>
+    )
+}

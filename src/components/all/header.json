@@ -2,6 +2,7 @@
     
     "2":{
         "name":"Subjects",
+        "link":"/subjects",
         "options":[
         {"text":"Maths","url":"/subjects/maths"},
         {"text":"English","url":"/subjects/english"},
@@ -34,6 +35,7 @@
     },   
     "5":{
         "name":"Exams",
+        "link":"/exams",
         "options":[
         {"text":"Maths","url":"/exams/maths"},
         {"text":"English","url":"/exams/english"},

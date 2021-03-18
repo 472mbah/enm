@@ -1,5 +1,4 @@
 import './styling/start.css';
-import { Transition } from 'react-transition-group';
 //https://reactcommunity.org/react-transition-group/transition
 import chat from './styling/icons/chat.svg';
 import { Registration, Query } from './main_content';
@@ -9,11 +8,14 @@ import { useState, useEffect } from 'react';
 import { IntroductionV2, Categories, Testemonials, PortalBadge, PortalBadgeV2 } from './components/homepage/index.js';
 import { BrowserRouter as Router, useLocation, Route, Link, useHistory  } from "react-router-dom";
 import { PageGenerator as Pgs } from './pages/subjects';
+import { SubjectsIntro } from './pages/subjects';
+import { ExamsIntro } from './pages/exams';
 import { PageGenerator as Pge } from './pages/exams';
 import { PageGenerator as Abo } from './pages/about';
 import { PageGenerator as Tut } from './pages/tutors';
 import { PageGenerator as Jbs } from './pages/jobs';
 import { Footer } from './components/footer';
+import { MobileMenu } from './components/all/headers' 
 
 const duration = 300;
 
@@ -47,13 +49,7 @@ export const Main = () => {
       });
 
     return <div  id="start-container">
-        <Transition in={big_cover} timeout={{ appear: 500, enter: 300, exit: 500,}}>
-            {state => (
-                <div id="big-cover-container" style={{
-                    ...defaultStyle,
-                    ...transitionStyles[state]
-                    
-                  }}>
+
 {                    big_cover ? <div id="big-cover">
                         {/* <Registration/> */}
                         {
@@ -62,9 +58,7 @@ export const Main = () => {
                         }
 
                     </div> : null}
-                 </div>                
-            )}
-      </Transition>
+
 
 
         <GreyHeader/>
@@ -77,11 +71,19 @@ export const Main = () => {
 }
 
 const MainBody = () => {
+
+    const menuMobile = useSelector(state => state.rootReducer.mobile_menu);
+
     return (
         <div id="main-body">
+            {
+                menuMobile ? <MobileMenu/> : null
+            }
             <div id="main-body-inner">
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/enm" component={HomePage} />
+                <Route exact path="/subjects/" component={SubjectsIntro}  />
+                <Route exact path="/exams/" component={ExamsIntro}  />
                 <Route exact path="/subjects/:id" component={Pgs}  />
                 <Route exact path="/exams/:id" component={Pge}  />
                 <Route exact path="/about" component={Abo}  />

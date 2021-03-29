@@ -12,7 +12,7 @@
         {"text":"Psychology","url":"/subjects/psychology"}
     ]},
     "1":{
-        "name":"Mental-Health",
+        "name":"Coaching & Mentoring",
         "options":[
         {"text":"Support","url":"/mh/Support"},
         {"text":"Why MH","url":"/mh/why"},

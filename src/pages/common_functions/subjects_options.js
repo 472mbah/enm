@@ -25,11 +25,15 @@ export const Subject_Gallery = ({ section_name, data }) => {
             default: return math_b;
         }
     }
+    
+    const getDescription = (d) => {
+        return d.overview.text.substring(0, 220) + "...";
+    }  
 
     Object.keys(data).forEach((key, i)=>{
         // console.log(key)
         subs.push(<div key={i}  className="subject-container-index"><MediaCard type={section_name} key_={key} 
-        data={{img:selectBackground(key), title:toUpper(key), description:"Waiting for description"}} 
+        data={{img:selectBackground(key), title:toUpper(key), description:getDescription(data[key])}} 
         text="Get details" /></div>)
     })
 

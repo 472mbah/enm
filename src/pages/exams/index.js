@@ -5,8 +5,8 @@ import { CombineTest } from '../../components/homepage'
 import { useEffect, useState } from 'react';
 import { PageHeader } from '../../main_content/pageHeader';
 import search from '../../styling/icons/search.png';
+import { Subject_Gallery } from '../common_functions/subjects_options';
 import more from '../../styling/icons/more.svg';
-import { Link } from 'react-router-dom';
 
 import {
     useLocation,
@@ -15,16 +15,11 @@ import {
 
   export const ExamsIntro = () => {
 
-    const subs = []
-
-    Object.keys(data).forEach((key, i)=>{
-        subs.push(<Link to={"/exams/"+key}><p key={i}>{key.toUpperCase()}</p></Link>)
-    })
-
     return(
         <div className="page-main">
-            Access exams for subjects via the links below: 
-            {subs}
+
+            <Subject_Gallery data={data} section_name="exams"/>
+            
         </div>
     )
 }

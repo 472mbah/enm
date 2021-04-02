@@ -3,6 +3,10 @@ import '../../styling/allPages/index.css';
 import data from './content.json';
 import { CombineTest } from '../../components/homepage'
 import { useEffect, useState } from 'react';
+
+
+import { Subject_Gallery } from '../common_functions/subjects_options';
+
 import { PageHeader } from '../../main_content/pageHeader';
 import { 
     useLocation,
@@ -60,16 +64,11 @@ export const PageGenerator = () => {
 
 export const SubjectsIntro = () => {
 
-    const subs = []
-
-    Object.keys(data).forEach((key, i)=>{
-        subs.push(<Link to={"/subjects/"+key}><p key={i}>{key.toUpperCase()}</p></Link>)
-    })
-
     return(
         <div className="page-main">
-            Access subjects via the link below: 
-            {subs}
+
+            <Subject_Gallery data={data} section_name="subjects"/>
+            
         </div>
     )
 }

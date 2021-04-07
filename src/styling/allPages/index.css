@@ -280,7 +280,7 @@ hr {
     }
 
     .page-main-subjects-list-container .subject-container-index {
-        width: 75%;
+        width: 100%;
         display:flex;
         justify-content: center;
         align-items: center;

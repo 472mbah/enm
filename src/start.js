@@ -16,6 +16,7 @@ import { PageGenerator as Tut } from './pages/tutors';
 import { PageGenerator as Jbs } from './pages/jobs';
 import { Footer } from './components/footer';
 import { MobileMenu } from './components/all/headers' 
+import { Slider } from './pages/common_functions/Slider/Slider';
 
 const duration = 300;
 

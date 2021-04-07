@@ -1,9 +1,11 @@
 import '../../styling/homepage/index.css';
 import { useDispatch}  from 'react-redux';
+import { useState }  from 'react';
 import high5 from '../../styling/icons/high_5.svg';
 import stars_ from '../../styling/icons/stars.svg';
 import arrow from '../../styling/icons/arrow.svg';
 import portal_badge from '../../styling/icons/portalBadge.svg';
+import Slider from '../../pages/common_functions/Slider/Slider';
 
 // maths image => https://www.freepik.com/free-vector/chalkboard-with-math-elements_1159689.htm#page=1&query=mathematics%20background&position=1
 // english image => https://www.freepik.com/premium-photo/english-word-with-letter-beads-blue-background_3935695.htm#page=1&query=english%20background&position=8
@@ -40,18 +42,43 @@ export const Introduction = () => {
     </div>)
 }
 
+const IntroSliderBackground = () => {
+
+    const handleClick = () => {
+        alert("hello")
+    }
+
+    const [current, setCurrent] = useState(0);
+
+    return (
+        <div id="background-slider-container">
+            <div id="background-slider-original">
+                <Slider current={current}/>
+            </div>
+            <div onClick={()=>handleClick()} id="background-slider-filter"></div>
+        </div>        
+    )
+}
+
 export const IntroductionV2 = () => {
     
+    
+
     const dispatch = useDispatch();
     
-    return (<div className="introduction-containerV2">
-        
-        
+    return (
+        <div id="intro-first">
+            <IntroSliderBackground/>
+
+    <div  className="introduction-containerV2">
+
+            
+
             <h1 id="intro-tag-header">
             Smart and easy online learning, just for you.
             </h1>
 
-            <p id="welcome-sentence">
+            <p id="welcome-sentence-mini">
             We offer one-to-one help to students in the UK lessons so they can understand the world around them better.
             </p>
 
@@ -59,7 +86,9 @@ export const IntroductionV2 = () => {
 
 
 
-    </div>)
+    </div>
+    </div>
+    )
 }
 
 export const PortalBadge = () => {
@@ -68,7 +97,6 @@ export const PortalBadge = () => {
     
     return (<div id="portalbadge-container" className="introduction-container">
         
-
 
         <div id="text-container">
             <p id="intro-text-a" className="intro-text">
@@ -116,7 +144,7 @@ export const Categories = () => {
             <div className="component-header-title">Qualifications</div>
 
         <div className="regular-cont-main-frame">
-
+            {/* <Slider/> */}
 
             <h2 id="intro-text-b" className="intro-text">
             We offer a fully  personalised tutoring service designed for the UK curriculum.

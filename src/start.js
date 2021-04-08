@@ -80,18 +80,26 @@ const MainBody = () => {
             {
                 menuMobile ? <MobileMenu/> : null
             }
-            <div id="main-body-inner">
-                <Route exact path="/" component={HomePage} />
-                <Route exact path="/enm" component={HomePage} />
-                <Route exact path="/subjects/" component={SubjectsIntro}  />
-                <Route exact path="/exams/" component={ExamsIntro}  />
-                <Route exact path="/subjects/:id" component={Pgs}  />
-                <Route exact path="/exams/:id" component={Pge}  />
-                <Route exact path="/about" component={Abo}  />
-                <Route exact path="/tutors" component={Tut}  />
-                <Route exact path="/jobs" component={Jbs}  />
+
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/enm" component={HomePage} />
+
+            <div id="main-body-mini">
+                {/* <div></div> */}
+                <div id="main-body-inner">
+
+                    <Route exact path="/subjects/" component={SubjectsIntro}  />
+                    <Route exact path="/exams/" component={ExamsIntro}  />
+                    <Route exact path="/subjects/:id" component={Pgs}  />
+                    <Route exact path="/exams/:id" component={Pge}  />
+                    <Route exact path="/about" component={Abo}  />
+                    <Route exact path="/tutors" component={Tut}  />
+                    <Route exact path="/jobs" component={Jbs}  />
+                    <Footer/>
+
+                </div>
             </div>
-            <Footer/>
+
         </div>
     )
 }
@@ -100,12 +108,16 @@ const HomePage = () => {
     return (
         <div id="main-body-page">
                 <IntroductionV2/>
-                <Categories/>
+            <div id="main-body-mini">
+                <div id="main-body-inner">
+                    <Categories/>
 
-                <PortalBadgeV2/>
-                {/* <hr className="line-break"/> */}
-                {/* <hr className="line-break"/> */}
-                <Testemonials/>
+                    <PortalBadgeV2/>
+                    {/* <hr className="line-break"/> */}
+                    {/* <hr className="line-break"/> */}
+                    <Testemonials/>
+                </div>                
+            </div>                
         </div>
     )
 }

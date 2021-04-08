@@ -55,7 +55,7 @@ const IntroSliderBackground = () => {
             <div id="background-slider-original">
                 <Slider current={current}/>
             </div>
-            <div onClick={()=>handleClick()} id="background-slider-filter"></div>
+            <div id="background-slider-filter"></div>
         </div>        
     )
 }
@@ -73,17 +73,17 @@ export const IntroductionV2 = () => {
     <div  className="introduction-containerV2">
 
             
+            <div className="introduction-containerV3">
+                <h1 id="intro-tag-header">
+                Smart and easy online learning, just for you.
+                </h1>
 
-            <h1 id="intro-tag-header">
-            Smart and easy online learning, just for you.
-            </h1>
+                <p id="welcome-sentence-mini">
+                We offer one-to-one help to students in the UK lessons so they can understand the world around them better.
+                </p>
 
-            <p id="welcome-sentence-mini">
-            We offer one-to-one help to students in the UK lessons so they can understand the world around them better.
-            </p>
-
-            <button onClick={()=>dispatch({type:"TOGGLE_COVER", to:0})} id="start-now">Start now</button>
-
+                <button onClick={()=>dispatch({type:"TOGGLE_COVER", to:0})} id="start-now">Start now</button>
+            </div>
 
 
     </div>

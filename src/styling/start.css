@@ -2,8 +2,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
 .line-break {
@@ -12,26 +10,33 @@
 }
 
 #main-body {
-    /* padding-top: 100px; */
-    width: 70%;
-    /* height: 85vh; */
+    width: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
+    margin-bottom: 2em;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+#main-body-mini {
+    width: 100%;
+    display: flex;
     justify-content: center;
     position: relative;
     margin-bottom: 2em;
-    /* overflow: auto; */
+   
 }
 
 
-
 #main-body-inner {
-    margin: 1em 0;
-    width: 100%;
-    padding: 1em 0em;
-    padding-bottom: 5em;
+    margin: 0.5em 0;
+    width: 70%;
+    /* padding: 1em 0em; */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 6em;
     height: 100%;
 }
@@ -39,6 +44,7 @@
 #main-body-page {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 4em;
 }
 
@@ -46,7 +52,7 @@
     position: fixed;
     right: 30px;
     bottom: 30px;
-    height: 50px;
+    height: 40px;
 }
 
 #chat-box-button:hover {

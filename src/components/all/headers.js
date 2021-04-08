@@ -93,26 +93,11 @@ const MenuUnit = ({ index }) => {
         
         {
             single ? 
-                <Link to={link}><button  className={`nav-bar-button`} >{name}</button></Link>
-            : <button className={`nav-bar-button`} >{name}</button>
+                <Link to={link}><button  className="nav-bar-button" >{name}</button></Link>
+            : <button className="nav-bar-button" >{name}</button>
         }
 
         
-            {
-                hover? <div id="fill"></div> : null
-            }
-           
-
-
-            {/* <div style={{border: options.length>0&&hover?'1.5px solid #ddd':'none', height:hover?'auto':'0px', transition: "0.2s", overflow: hover?"auto":"hidden"}}  className="drop-down-container">
-            
-                {
-                    options.map(({text, url })=>
-                        <Link to={url}> <button >{text}</button> </Link>
-                    )
-                }
-
-            </div>    */}
 
     </div>
     )

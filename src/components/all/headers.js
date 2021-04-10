@@ -26,7 +26,7 @@ export const GreyHeader = () => {
 
     const is_dm = () => {
         let p = window.location.pathname;
-        return p=="/enm" || p=="/";
+        return p=="/enm" || p=="/" || p=="/enm/";
     }
 
 

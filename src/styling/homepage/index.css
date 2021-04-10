@@ -427,6 +427,20 @@
         padding: 10px;
         align-items: center;
     }
+    .introduction-containerV3 h1{
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .introduction-containerV2 #welcome-sentence-mini{
+        font-size: 1.5em;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .introduction-containerV3{
+        width: 90%;
+    }
    
 }
 

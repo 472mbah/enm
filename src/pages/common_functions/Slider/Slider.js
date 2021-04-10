@@ -55,7 +55,7 @@ export const Slider = () => {
   };
 
   const handle_click = () => {
-      setCurrent((current+1)%(images.length-1));
+      setCurrent((current+1)%(images.length));
 
       setX(current * getWidth());
   }
@@ -63,9 +63,8 @@ export const Slider = () => {
   useEffect(() => {
     const timer = setInterval(() => {
 
-      setInterval(() => {}, 1000);
       handle_click()
-    }, 4000);
+    }, 5000);
     return () => clearTimeout(timer);
   });
 //onClick={()=>handle_click()}

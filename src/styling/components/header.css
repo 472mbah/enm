@@ -8,12 +8,11 @@
     width: 100%;
     z-index: 5;
     /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
-    background: rgba(0, 0, 0, 0.7);
+    
     backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
     color: #fff;
-    /* border-bottom: 1.5px solid #ddd; */
 }
 
 #secondary-inner-header {
@@ -69,7 +68,7 @@
 }
 
 .nav-bar-button  {
-    font-family: sfb;
+    /* font-family: sfr; */
     font-size: 18px;
     height: fit-content;
     background: none;
@@ -77,7 +76,7 @@
     outline: none;
     /* font-weight: bold; */
     /* color: rgba(0, 0, 0, 0.7); */
-    color: rgba(255, 255, 255, 0.7);
+    /* color: rgba(255, 255, 255, 0.7); */
     cursor: pointer;
     background: none;
     text-align: center;
@@ -120,7 +119,7 @@
     /* line-height: 105px; */
     letter-spacing: 0.015em;
     /* color: rgba(0, 0, 0, 0.7); */
-    color: rgba(255, 255, 255, 0.7);
+    /* color: rgba(255, 255, 255, 0.7); */
 }
 
 

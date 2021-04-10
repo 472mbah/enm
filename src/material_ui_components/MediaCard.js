@@ -54,12 +54,12 @@ export default function MediaCard ({ data, text, type, key_ }) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        {/* <Button size="small" color="primary">
           Get Tutor
         </Button>
         <Button size="small" color="primary">
           {text}
-        </Button>
+        </Button> */}
       </CardActions>
     </Card>
   );

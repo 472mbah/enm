@@ -10,7 +10,7 @@ import { Subject_Gallery } from '../common_functions/subjects_options';
 import { PageHeader } from '../../main_content/pageHeader';
 import { 
     useLocation,
-    useParams, Link
+    useParams
   } from "react-router-dom";
 
 
@@ -29,9 +29,6 @@ export const PageGenerator = () => {
             changeSubject(id)
         else 
             changeSubject('maths')
-
-            // failed = true;
-
 
     }, [location]);
 

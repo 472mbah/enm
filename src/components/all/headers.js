@@ -10,7 +10,7 @@ import { Loading } from '../loading';
 import { useSelector, useDispatch } from 'react-redux'; 
 import data from './header.json';
 import { BrowserRouter as Router, useLocation, Route, Link, useHistory  } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 
@@ -24,16 +24,72 @@ export const GreyHeader = () => {
     const dispatch = useDispatch();
     const menuMobile = useSelector(state => state.rootReducer.mobile_menu);
 
+    const is_dm = () => {
+        let p = window.location.pathname;
+        return p=="/enm" || p=="/";
+    }
+
+
+
+    const [dm, set_dm] = useState(is_dm());
+    const [past_slider, set_past_slider] = useState();
+    const [previous_pos, set_previous_pos] = useState(0);
+    const [hide, set_hide] = useState(false);
+
     const handleClick = () => {
         history.push("/enm");
     }
 
+    const eval_height = () => {
+        set_past_slider(window.pageYOffset>window.innerHeight);
+        // const currentScrollPos = window.pageYOffset;
+        // const visible = previous_pos < currentScrollPos;
+        // set_previous_pos(currentScrollPos)
+        // set_hide(!visible)
+        // if (window.pageYOffsetprevious_pos) {
+            // set_previous_pos(window.pageYOffset);            
+        // }
+    }
+
+
+
+    const location = useLocation();
+    useEffect(() => {
+
+        set_dm(is_dm());
+
+    }, [location]);
+
+    const eval_show = (curr) => {
+        return previous_pos>curr
+    }
+
+    useEffect(() => {
+        window.onscroll = () => eval_height();
+        
+        return function cleanupListener() {
+            window.onscroll = () => eval_height();
+        }
+      }, []);
+
 
     const [hover, setIndex] = useState(false);
 
+    const styling = () => {
+        let val = dm & !past_slider ? 0 : 255;
+        let val2 = dm & !past_slider ? 255 : 0;
+        // let hide = 
+        // set_previous_pos(window.pageYOffset)
+        return {
+            background: `rgba(${val}, ${val}, ${val}, 0.2)`,
+            color: `rgba(${val2}, ${val2}, ${val2}, 0.7)`,
+            borderBottom: !dm || past_slider ? "1.5px solid #ddd" : "none",
+            // transform: `translateY(${!hide?'-100':'0'}%)`
+        };
+    }
 
     return (
-        <div  onMouseLeave={()=>setIndex(false)} onMouseEnter={()=>setIndex(true)}  id="start-float-header">
+        <div  style={styling()}  onMouseLeave={()=>setIndex(false)} onMouseEnter={()=>setIndex(true)}  id="start-float-header">
             {/* {
                 mobile ? 
             } */}
@@ -51,7 +107,7 @@ export const GreyHeader = () => {
             {
                 Object.keys(data).map(k=> 
                     <div  className="menu-parent">
-                        <MenuUnit show={hover==k} index={k} />
+                        <MenuUnit dm={dm & !past_slider} show={hover==k} index={k} />
                     </div>
                 )                
             }
@@ -80,21 +136,28 @@ export const MobileMenu = () => {
     
 } 
 
-const MenuUnit = ({ index }) => {
+const MenuUnit = ({ index, dm }) => {
     
     const [hover, setHover] = useState(false);
 
     const { name, options, link } = data[index];
     const single = data[index].hasOwnProperty("link");
 
+    const styling = () => {
+        let val2 = dm ? 255 : 0;
+        return {
+            color: `rgba(${val2}, ${val2}, ${val2}, 0.7)`,
+        };
+    }
+
     return( 
     
-    <div className={`nav-bar-container`} onMouseOver={()=>setHover(true)} onMouseLeave={()=>setHover(false)} >
+    <div  className={`nav-bar-container`} onMouseOver={()=>setHover(true)} onMouseLeave={()=>setHover(false)} >
         
         {
             single ? 
-                <Link to={link}><button  className="nav-bar-button" >{name}</button></Link>
-            : <button className="nav-bar-button" >{name}</button>
+                <Link to={link}><button style={styling()}  className="nav-bar-button" >{name}</button></Link>
+            : <button style={styling()} className="nav-bar-button" >{name}</button>
         }
 
         

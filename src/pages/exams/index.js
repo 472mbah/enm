@@ -7,11 +7,22 @@ import { PageHeader } from '../../main_content/pageHeader';
 import search from '../../styling/icons/search.png';
 import { Subject_Gallery } from '../common_functions/subjects_options';
 import more from '../../styling/icons/more.svg';
+import DocViewer from "react-doc-viewer";
 
 import {
     useLocation,
     useParams
   } from "react-router-dom";
+
+ 
+//   const ShowPaper = () => {
+//     const docs = [
+//         //   { uri: "https://url-to-my-pdf.pdf" },
+//           { uri: require("./GCSE_Higher_Homeworks.doc") }, // Local File
+//         ];
+   
+//     return (<DocViewer documents={docs} />);
+//   }
 
   export const ExamsIntro = () => {
 
@@ -31,7 +42,10 @@ export const PageGenerator = () => {
     const id = useParams().id;
     const location = useLocation();
 
-
+    const docs = [
+        //   { uri: "https://url-to-my-pdf.pdf" },
+          { uri: require("./GCSE_Higher_Homeworks.doc") }, // Local File
+        ];
 
     useEffect(() => {
 
@@ -57,7 +71,7 @@ export const PageGenerator = () => {
                 <PageIndex/>
             {/* </div> */}
             
-
+            {/* <DocViewer documents={docs} /> */}
             <hr/>
             <Introduction subject={subject}/>
             <hr/>

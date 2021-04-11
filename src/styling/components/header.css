@@ -116,10 +116,11 @@
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
-    /* line-height: 105px; */
     letter-spacing: 0.015em;
-    /* color: rgba(0, 0, 0, 0.7); */
-    /* color: rgba(255, 255, 255, 0.7); */
+}
+
+#grey-header #logo-image {
+    height: 1em;
 }
 
 
@@ -140,8 +141,24 @@
     cursor:pointer;
 }
 
+#big-purpled {
+    font-size: 20px;
+    font-family: sfb;
+    padding: 10px;
+    /* border: 2px solid #443879; */
+    /* color: #483699; */
+    background:rgba(0, 0, 0, 0.2);
+    border: none;
+    color: #000;
+    /* background: none; */
+    border-radius: 0px;
+    opacity: 1;
+    width: fit-content;
+    cursor:pointer;
+}
 
-#big-purple:hover {
+
+#big-purple:hover, #big-purpled:hover {
     /* border: 2px solid #443879; */
     /* color: #483699; */
     background:#443879;

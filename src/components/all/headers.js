@@ -9,6 +9,7 @@ import cross from '../../styling/icons/cross.svg';
 import { Loading } from '../loading';
 import { useSelector, useDispatch } from 'react-redux'; 
 import data from './header.json';
+import oflgo from '../../styling/logos/logo_mini.jpg';
 import { BrowserRouter as Router, useLocation, Route, Link, useHistory  } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
@@ -88,11 +89,24 @@ export const GreyHeader = () => {
         };
     }
 
+    const styling_button = () => {
+        let val = dm & !past_slider ? 0 : 255;
+        let val2 = dm & !past_slider ? 255 : 0;
+        // let hide = 
+        // set_previous_pos(window.pageYOffset)
+        return {
+            background: `rgba(${val}, ${val}, ${val}, 0.2)`,
+            color: `rgba(${val2}, ${val2}, ${val2}, 0.7)`,
+        };
+    }
+
     return (
         <div  style={styling()}  onMouseLeave={()=>setIndex(false)} onMouseEnter={()=>setIndex(true)}  id="start-float-header">
             {/* {
                 mobile ? 
             } */}
+                {/* <img id="logo-image" src={oflgo}/> */}
+
         <div  id="grey-header">
             
             <div id="social-icons-container">
@@ -113,7 +127,8 @@ export const GreyHeader = () => {
             }
             </div>
             <div id="secondary-inner-header">
-                <button id="big-purple">Portal</button>
+                <button style={styling_button()} id={`big-purple`}>Portal</button>
+                {/* <button id={`big-purpled`}>Portal</button> */}
             </div>
 
             </div> 

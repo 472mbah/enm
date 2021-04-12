@@ -1,0 +1,15 @@
+/* #file-handler {
+    height: 80%;
+} */
+
+#file-manager-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+#file-manager-controller {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}

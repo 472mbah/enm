@@ -3,11 +3,13 @@ import '../../styling/allPages/index.css';
 import data from './content.json';
 import { CombineTest } from '../../components/homepage'
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { PageHeader } from '../../main_content/pageHeader';
 import search from '../../styling/icons/search.png';
 import { Subject_Gallery } from '../common_functions/subjects_options';
 import more from '../../styling/icons/more.svg';
-import DocViewer from "react-doc-viewer";
+import FileView from '../common_functions/FileViewer';
+
 
 import {
     useLocation,
@@ -15,14 +17,6 @@ import {
   } from "react-router-dom";
 
  
-//   const ShowPaper = () => {
-//     const docs = [
-//         //   { uri: "https://url-to-my-pdf.pdf" },
-//           { uri: require("./GCSE_Higher_Homeworks.doc") }, // Local File
-//         ];
-   
-//     return (<DocViewer documents={docs} />);
-//   }
 
   export const ExamsIntro = () => {
 
@@ -41,11 +35,8 @@ export const PageGenerator = () => {
     const [failed, setFal] = useState(false)
     const id = useParams().id;
     const location = useLocation();
+    
 
-    const docs = [
-        //   { uri: "https://url-to-my-pdf.pdf" },
-          { uri: require("./GCSE_Higher_Homeworks.doc") }, // Local File
-        ];
 
     useEffect(() => {
 
@@ -70,8 +61,7 @@ export const PageGenerator = () => {
             {/* <div id="page-index-container-main"> */}
                 <PageIndex/>
             {/* </div> */}
-            
-            {/* <DocViewer documents={docs} /> */}
+            {/* <FileView /> */}
             <hr/>
             <Introduction subject={subject}/>
             <hr/>
@@ -130,6 +120,7 @@ export const Search = ({placeholder}) => {
 const Papers = ({subject}) => {
 
     const items = []
+    const dispatch = useDispatch();
 
     for (let k = 0; k < 20; k++) {
       items.push(<li className="paper-container" key={k}>
@@ -139,7 +130,7 @@ const Papers = ({subject}) => {
           <div className="right-section">
             <p className="board-name">Edexcel</p>
             {/* <img src={more}/> */}
-            <button  type="button" className="small_button" id="search_button">View</button>
+            <button onClick={()=>dispatch({type:"TOGGLE_COVER", to:3})} type="button" className="small_button" id="search_button">View</button>
             <button  type="button" className="small_button" id="search_button">Download</button>
 
           </div>

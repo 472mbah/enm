@@ -16,6 +16,7 @@ import { PageGenerator as Tut } from './pages/tutors';
 import { PageGenerator as Jbs } from './pages/jobs';
 import { Footer } from './components/footer';
 import { MobileMenu } from './components/all/headers' 
+import FileManager from './pages/common_functions/FileViewer';
 
 
 
@@ -44,7 +45,7 @@ export const Main = () => {
 {                    big_cover ? <div id="big-cover">
                         {
                             big_cover_to==0 ? <Registration/>  :
-                                            <Query/>
+                            big_cover_to==1 ? <Query/> : <FileManager/>
                         }
 
                     </div> : null}

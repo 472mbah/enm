@@ -42,7 +42,7 @@ export default function MediaCard ({ data, text, type, key_ }) {
           height={"300px"}
           zDepthShadows="none"
         />
-      </Link>
+      
 
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
@@ -52,6 +52,7 @@ export default function MediaCard ({ data, text, type, key_ }) {
             {description}
           </Typography>
         </CardContent>
+        </Link>
       </CardActionArea>
       <CardActions>
         {/* <Button size="small" color="primary">

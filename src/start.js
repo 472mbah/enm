@@ -5,7 +5,7 @@ import { Registration, Query } from './main_content';
 import { GreyHeader } from './components/all/headers';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
-import { IntroductionV2, Categories, Testemonials, PortalBadge, PortalBadgeV2 } from './components/homepage/index.js';
+import { IntroductionV2, Categories, Testemonials, Subjects, PortalBadgeV2 } from './components/homepage/index.js';
 import { BrowserRouter as Router,  Route  } from "react-router-dom";
 import { PageGenerator as Pgs } from './pages/subjects';
 import { SubjectsIntro } from './pages/subjects';
@@ -101,6 +101,7 @@ const HomePage = () => {
                 <div id="main-body-inner">
                     <Categories/>
                     <PortalBadgeV2/>
+                    <Subjects/>
                     <Testemonials/>
                 </div>                
             </div>                

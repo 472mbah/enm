@@ -17,7 +17,7 @@ import { PageGenerator as Jbs } from './pages/jobs';
 import { Footer } from './components/footer';
 import { MobileMenu } from './components/all/headers' 
 import FileManager from './pages/common_functions/FileViewer';
-
+import Headroom from 'react-headroom';
 
 
 
@@ -51,8 +51,7 @@ export const Main = () => {
                     </div> : null}
 
 
-
-        <GreyHeader/>
+            <GreyHeader/>
         <MainBody/>
         
         <img onClick={()=>dispatch({type:"TOGGLE_COVER", to:1})} id="chat-box-button" src={chat} />

@@ -287,11 +287,12 @@
     width: 100%;
     height: fit-content;
     width: calc(100%-20px);
-    border: 1.5px solid #ddd;
+    border: 2px solid #f3f3f3;
+    border-radius: 10px;
     box-sizing: border-box;
     display: grid;
-    border-radius: 0px;
     grid-template-columns: 1fr 1fr;
+    
 }
 
 .regualr-cont-main-frame-no-b {

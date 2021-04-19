@@ -4,6 +4,7 @@ import '../../styling/components/header.css';
 // import youtube from '../../styling/icons/youtube.png';
 // import linkedin from '../../styling/icons/linkedin.png';
 // import twitter from '../../styling/icons/twitter.png';
+
 import mobile_option from '../../styling/icons/mobile_option.svg';
 import cross from '../../styling/icons/cross.svg';
 import { Loading } from '../loading';
@@ -43,12 +44,20 @@ export const GreyHeader = () => {
 
     const eval_height = () => {
         set_past_slider(window.pageYOffset>window.innerHeight);
-        // const currentScrollPos = window.pageYOffset;
+        const currentScrollPos = window.pageYOffset;
+        set_hide(previous_pos < currentScrollPos)
+        // console.log(previous_pos < currentScrollPos, previous_pos, currentScrollPos)
+        set_previous_pos(currentScrollPos);            
+
         // const visible = previous_pos < currentScrollPos;
+        // console.log(currentScrollPos, visible);
         // set_previous_pos(currentScrollPos)
-        // set_hide(!visible)
         // if (window.pageYOffsetprevious_pos) {
-            // set_previous_pos(window.pageYOffset);            
+        // if (previous_pos < currentScrollPos) {
+        //     // set_previous_pos(window.pageYOffset);            
+        //     set_hide(true)
+        // }else {
+        //     set_hide(false)
         // }
     }
 
@@ -67,11 +76,10 @@ export const GreyHeader = () => {
 
     useEffect(() => {
         window.onscroll = () => eval_height();
-        
         return function cleanupListener() {
             window.onscroll = () => eval_height();
         }
-      }, []);
+      });
 
 
     const [hover, setIndex] = useState(false);
@@ -82,10 +90,11 @@ export const GreyHeader = () => {
         // let hide = 
         // set_previous_pos(window.pageYOffset)
         return {
+             
             background: `rgba(${val}, ${val}, ${val}, 0.2)`,
             color: `rgba(${val2}, ${val2}, ${val2}, 0.7)`,
             borderBottom: !dm || past_slider ? "1.5px solid #ddd" : "none",
-            // transform: `translateY(${!hide?'-100':'0'}%)`
+            transform: `translateY(${hide?'-100':'0'}%)`
         };
     }
 

@@ -60,7 +60,7 @@ export const IntroductionV2 = () => {
     
     return (
         <div id="intro-first">
-            <IntroSliderBackground/>
+            {/* <IntroSliderBackground/> */}
 
     <div  className="introduction-containerV2">
 
@@ -86,12 +86,12 @@ export const IntroductionV2 = () => {
 export const Subjects = () => {
 
     let data = [
-        { img:maths_icon, title:"Maths", text:"Start coding with your favorite language on any platform, OS, and device." },
-        { img:english_icon, title:"English", text:"Start coding with your favorite language on any platform, OS, and device." },
-        { img:humanities_icon, title:"Humanities", text:"Start coding with your favorite language on any platform, OS, and device." },
-        { img:psychology_icon, title:"Psychology", text:"Start coding with your favorite language on any platform, OS, and device." },
-        { img:languages_icon, title:"Languages", text:"Start coding with your favorite language on any platform, OS, and device." },
-        { img:science_icon, title:"Science", text:"Start coding with your favorite language on any platform, OS, and device." },
+        { img:maths_icon, title:"Maths", text:"This is a description of the following subject. Write whatever you wish here." },
+        { img:english_icon, title:"English", text:"This is a description of the following subject. Write whatever you wish here." },
+        { img:humanities_icon, title:"Humanities", text:"This is a description of the following subject. Write whatever you wish here." },
+        { img:psychology_icon, title:"Psychology", text:"This is a description of the following subject. Write whatever you wish here." },
+        { img:languages_icon, title:"Languages", text:"This is a description of the following subject. Write whatever you wish here." },
+        { img:science_icon, title:"Science", text:"This is a description of the following subject. Write whatever you wish here." },
     ]
 
     let applied = { img:applied_maths_icon, title:"Applied Maths", text:"Start coding with your favorite language on any platform, OS, and device." }
@@ -119,7 +119,7 @@ export const Subjects = () => {
     )
 }
 
-const Subjects_mini = ({ data }) => {
+const Subjects_mini = ({ data, show=true }) => {
     
     const { img, title, text } = data;
 
@@ -127,7 +127,7 @@ const Subjects_mini = ({ data }) => {
         <div id="subjects-container-mini">
             <img src={img }/>
             <h2>{title}</h2>
-            <p id="subjects-description">{text}</p>
+            { show? <p id="subjects-description">{text}</p> : null}
         </div>
     )
 }

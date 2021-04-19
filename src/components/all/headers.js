@@ -11,6 +11,7 @@ import { Loading } from '../loading';
 import { useSelector, useDispatch } from 'react-redux'; 
 import data from './header.json';
 import oflgo from '../../styling/logos/logo_mini.jpg';
+import { Subjects } from '../../components/homepage';
 import { BrowserRouter as Router, useLocation, Route, Link, useHistory  } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
@@ -46,19 +47,7 @@ export const GreyHeader = () => {
         set_past_slider(window.pageYOffset>window.innerHeight);
         const currentScrollPos = window.pageYOffset;
         set_hide(previous_pos < currentScrollPos)
-        // console.log(previous_pos < currentScrollPos, previous_pos, currentScrollPos)
         set_previous_pos(currentScrollPos);            
-
-        // const visible = previous_pos < currentScrollPos;
-        // console.log(currentScrollPos, visible);
-        // set_previous_pos(currentScrollPos)
-        // if (window.pageYOffsetprevious_pos) {
-        // if (previous_pos < currentScrollPos) {
-        //     // set_previous_pos(window.pageYOffset);            
-        //     set_hide(true)
-        // }else {
-        //     set_hide(false)
-        // }
     }
 
 
@@ -69,10 +58,6 @@ export const GreyHeader = () => {
         set_dm(is_dm());
 
     }, [location]);
-
-    const eval_show = (curr) => {
-        return previous_pos>curr
-    }
 
     useEffect(() => {
         window.onscroll = () => eval_height();
@@ -87,8 +72,6 @@ export const GreyHeader = () => {
     const styling = () => {
         let val = dm & !past_slider ? 0 : 255;
         let val2 = dm & !past_slider ? 255 : 0;
-        // let hide = 
-        // set_previous_pos(window.pageYOffset)
         return {
              
             background: `rgba(${val}, ${val}, ${val}, 0.2)`,
@@ -111,10 +94,6 @@ export const GreyHeader = () => {
 
     return (
         <div  style={styling()}  onMouseLeave={()=>setIndex(false)} onMouseEnter={()=>setIndex(true)}  id="start-float-header">
-            {/* {
-                mobile ? 
-            } */}
-                {/* <img id="logo-image" src={oflgo}/> */}
 
         <div  id="grey-header">
             
@@ -125,6 +104,9 @@ export const GreyHeader = () => {
             
             <img onClick={()=>dispatch({ type:"TOGGLE_MOBILE_MENU" })} src={menuMobile ? cross : mobile_option} id="mobile-option-icon"/>
 
+            {/* {
+                previous_pos!==0 ? <p>Top</p> : <div></div>
+            } */}
 
             <div id="secondary-inner-menu">
             {
@@ -135,13 +117,15 @@ export const GreyHeader = () => {
                 )                
             }
             </div>
-            <div id="secondary-inner-header">
+            {/* <div id="secondary-inner-header">
                 <button style={styling_button()} id={`big-purple`}>Portal</button>
-                {/* <button id={`big-purpled`}>Portal</button> */}
-            </div>
+            </div> */}
 
             </div> 
-        
+
+            {/* <div id="float-subjects">
+                <Subjects/>
+            </div> */}
         </div>
     )
 }

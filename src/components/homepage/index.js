@@ -60,7 +60,7 @@ export const IntroductionV2 = () => {
     
     return (
         <div id="intro-first">
-            {/* <IntroSliderBackground/> */}
+            <IntroSliderBackground/>
 
     <div  className="introduction-containerV2">
 

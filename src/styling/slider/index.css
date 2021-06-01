@@ -1,26 +1,9 @@
-/* position: relative;
-height: 100vh;
-width: 100vw;
-margin: 0 auto;
-overflow: hidden; */
-
-/* height: 100;
-width: 100%;
-background-image: url('${content}');
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center; */
 
 .full-image {
-    /* width: 100%; */
     height: auto;
-    /* display: inline-block; */
     opacity: 1;
     transition: opacity 0.5s linear; 
     object-fit: cover;
-    /* background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;        */
 }
 
 #slider-container {
@@ -28,13 +11,12 @@ background-position: center; */
     flex-direction: row;
     overflow: hidden;
     height: 100%;
-}
-
-.visible {
+    border-radius: 1em;
 
 }
-.hidden {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s 2s, opacity 2s linear;
-  }
+
+@media only screen and (max-width: 750px){
+    #slider-container {
+        border-radius: 0;
+    } 
+}

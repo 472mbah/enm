@@ -10,9 +10,11 @@ import maths_icon from '../../styling/icons/subject_icons/maths_icon.png';
 import psychology_icon from '../../styling/icons/subject_icons/psychology_icon.png';
 import science_icon from '../../styling/icons/subject_icons/science_icon.png';
 
-import high5 from '../../styling/icons/high_5.svg';
+// import high5 from '../../styling/icons/high_5.svg';
 import stars_ from '../../styling/icons/stars.svg';
 import arrow from '../../styling/icons/arrow.svg';
+import rightArrow from '../../styling/icons/right-arrow.png';
+import leftArrow from '../../styling/icons/left-arrow.png';
 import portal_badge from '../../styling/icons/portalBadge.svg';
 import Slider from '../../pages/common_functions/Slider/Slider';
 
@@ -89,15 +91,15 @@ export const IntroductionV2 = () => {
         else val = (current + (add ? 1:-1)) % images.length;
         
         setCurrent(val);
-        if (val==(images.length-2)) set_add(false);
-        if (val==1) set_add(true);
+        if (val==(images.length-1)) set_add(false);
+        if (val==0) set_add(true);
     }
   
     useEffect(() => {
       const timer = setInterval(() => {
   
         handleClick()
-      }, 5000);
+      }, 4000);
       return () => clearTimeout(timer);
     });
 
@@ -136,7 +138,8 @@ const SliderTracker = ({ size, current, handleClick }) => {
     let circles = [];
     for (let a = 0; a < size; a++){
         circles.push(<div key={a} 
-            style={{background:`rgba(255, 255, 255, ${current==a? 0.7 : 0.3})`}}
+            style={{
+                border:`3px solid rgba(255, 255, 255, ${current==a? 0.7 : 0.3})`}}
             className="circles"
             onClick={()=>handleClick(false, false, a)}
             ></div>);
@@ -145,11 +148,13 @@ const SliderTracker = ({ size, current, handleClick }) => {
     
     return (
         <div id="tracker-container">
-            <button onClick={()=>handleClick(true, false)}>Back</button>
+            {/* <button onClick={()=>handleClick(true, false)}>Back</button> */}
+            <img  className="arrows" src={leftArrow} onClick={()=>handleClick(true, false)}/>
             { 
                 circles
             }
-            <button onClick={()=>handleClick(true, true)}>Forward</button>
+            <img  className="arrows" src={rightArrow} onClick={()=>handleClick(true, true)}/>
+            
         </div>
     )
 }

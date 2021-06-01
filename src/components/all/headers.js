@@ -70,13 +70,16 @@ export const GreyHeader = () => {
     const [hover, setIndex] = useState(false);
 
     const styling = () => {
-        let val = dm & !past_slider ? 0 : 255;
-        let val2 = dm & !past_slider ? 255 : 0;
+        // let val = dm & !past_slider ? 0 : 255;
+        let val = 255;
+        // let val2 = dm & !past_slider ? 255 : 0;
+        let val2 = 0;
         return {
              
             background: `rgba(${val}, ${val}, ${val}, 0.2)`,
             color: `rgba(${val2}, ${val2}, ${val2}, 0.7)`,
-            borderBottom: !dm || past_slider ? "1.5px solid #ddd" : "none",
+            // borderBottom: !dm || past_slider ? "1.5px solid #ddd" : "none",
+            borderBottom: "1.5px solid #ddd",
             transform: `translateY(${hide?'-100':'0'}%)`
         };
     }
@@ -112,7 +115,7 @@ export const GreyHeader = () => {
             {
                 Object.keys(data).map(k=> 
                     <div  className="menu-parent">
-                        <MenuUnit dm={dm & !past_slider} show={hover==k} index={k} />
+                        <MenuUnit dm={false} show={hover==k} index={k} />
                     </div>
                 )                
             }

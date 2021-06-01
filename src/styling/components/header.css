@@ -38,7 +38,6 @@
 }
 
 #grey-header button {
-    /* border: none; */
     outline: none;
 }
 
@@ -226,6 +225,7 @@
 #mobile-option-icon {
     height: 2em;
     display: none;
+    margin-right: 2em;
 }
 
 @media only screen and (max-width: 750px){
@@ -275,4 +275,9 @@
     .nav-bar-button-mobile:hover {
         color:#443879;
     }
+
+    #phone-options {
+        margin-right: 1em;
+    }
+
 }

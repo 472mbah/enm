@@ -44,7 +44,7 @@ export const GreyHeader = () => {
     }
 
     const eval_height = () => {
-        set_past_slider(window.pageYOffset>window.innerHeight);
+        // set_past_slider(window.pageYOffset>window.innerHeight);
         const currentScrollPos = window.pageYOffset;
         set_hide(previous_pos < currentScrollPos)
         set_previous_pos(currentScrollPos);            
@@ -52,12 +52,12 @@ export const GreyHeader = () => {
 
 
 
-    const location = useLocation();
-    useEffect(() => {
+    // const location = useLocation();
+    // useEffect(() => {
 
-        set_dm(is_dm());
+    //     set_dm(is_dm());
 
-    }, [location]);
+    // }, [location]);
 
     useEffect(() => {
         window.onscroll = () => eval_height();
@@ -105,11 +105,7 @@ export const GreyHeader = () => {
                 <p onClick={handleClick} id="logo">Enmaths</p>
             </div>
             
-            <img onClick={()=>dispatch({ type:"TOGGLE_MOBILE_MENU" })} src={menuMobile ? cross : mobile_option} id="mobile-option-icon"/>
-
-            {/* {
-                previous_pos!==0 ? <p>Top</p> : <div></div>
-            } */}
+            <img  onClick={()=>dispatch({ type:"TOGGLE_MOBILE_MENU" })} src={menuMobile ? cross : mobile_option} id="mobile-option-icon"/>
 
             <div id="secondary-inner-menu">
             {
@@ -120,15 +116,10 @@ export const GreyHeader = () => {
                 )                
             }
             </div>
-            {/* <div id="secondary-inner-header">
-                <button style={styling_button()} id={`big-purple`}>Portal</button>
-            </div> */}
+
 
             </div> 
 
-            {/* <div id="float-subjects">
-                <Subjects/>
-            </div> */}
         </div>
     )
 }

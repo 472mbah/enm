@@ -74,7 +74,7 @@
     border-radius: 1em;
 }
 .introduction-containerV2 {
-    margin-top: 1em;
+    /* margin-top: 1em; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,7 +93,7 @@
     flex-direction: column;
     justify-content: center;
     /* padding-top: 2em; */
-    padding:3em 0;
+    padding:2em 0;
     /* height: 100vh; */
     /* height:calc(100%-10em); */
     align-items: center;

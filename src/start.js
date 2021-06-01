@@ -95,9 +95,10 @@ const MainBody = () => {
 const HomePage = () => {
     return (
         <div id="main-body-page">
-                <IntroductionV2/>
+                {/* <IntroductionV2/> */}
             <div id="main-body-mini">
                 <div id="main-body-inner">
+                    <IntroductionV2/>
                     <Categories/>
                     <PortalBadgeV2/>
                     <Subjects/>

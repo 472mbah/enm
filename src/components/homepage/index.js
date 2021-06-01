@@ -106,6 +106,7 @@ export const IntroductionV2 = () => {
     const dispatch = useDispatch();
     
     return (
+        <div id="upper-image">
         <div id="intro-first">
             <IntroSliderBackground images={images} current={current}/>
 
@@ -128,6 +129,7 @@ export const IntroductionV2 = () => {
             </div>
 
 
+    </div>
     </div>
     </div>
     )

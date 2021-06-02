@@ -42,14 +42,16 @@ export const Main = () => {
 
     return <div  id="start-container">
 
-{                    big_cover ? <div id="big-cover">
+{/* {                    big_cover ? <div id="big-cover">
                         {
                             big_cover_to==0 ? <Registration/>  :
                             big_cover_to==1 ? <Query/> : <FileManager/>
                         }
 
-                    </div> : null}
-
+                    </div> : null} */}
+<div style={{top:big_cover?'0':'-100%'}} id="big-cover">
+<Registration/>
+</div>
 
             <GreyHeader/>
         <MainBody/>

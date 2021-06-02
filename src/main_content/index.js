@@ -1,7 +1,10 @@
 import '../styling/main.css';
 import { useDispatch, useStore } from 'react-redux';
+import { useState } from 'react';
 import { Maths, Introduction } from '../pages/subjects';
 import { BrowserRouter as Router, useLocation, Route, Link, useHistory  } from "react-router-dom";
+import Circles from '../components/loading/circles';
+import cancelIcon from '../styling/icons/cancel.png';
 
 export const Main = () => {
     const location = useLocation();
@@ -84,43 +87,95 @@ export const Query = () => {
 
 export const Registration = () => {
 
+    const passwords_not_same = "Passwords not equal"
+    const loading_message = "Authorising details"
+    const success_message = "Almost there..."
+    const error_style = { background:"#E81212", color:"#fff" }
+    const main_style = { backgroundColor:"#ddd", width:'100%' }
+    const success_style = { background:"#43C515", color:"#fff", padding: '1em 1em', boxShadow: '0px 0px 7px rgba(0, 0, 0, 0.5)' }
+    const loading_style = { background:"#E89F12", color:"#fff", padding: '1em 1em', boxShadow: '0px 0px 7px rgba(0, 0, 0, 0.5)' }
+    
+    const loading_circle_style = {main_circumference:"45", mini_circumference:"25", border_width:"2", colour:"#fff"}
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [repeatPassword, setRepeatPassword] = useState("");
+
+    const [loading, setLoading] = useState(false)
+    const [message, setMessage] = useState("")
+    const [messageStyle, setMessageStyle] = useState(main_style)
+
+    const manageSubmit = () => {
+        if (password!=repeatPassword) {
+            setMessageStyle(error_style);
+            setMessage(passwords_not_same);
+            return;
+        } 
+        setLoading(true)
+        setMessageStyle(loading_style);
+        setMessage(loading_message)
+        // setTimeout(()=>{}, 3000)
+        setMessageStyle(success_style);
+        setMessage(success_message)
+
+
+        alert(`Email: ${email} \n password:${password} \n repeatPassword:${repeatPassword}`)
+    }
+
+    
+
     const dispatch = useDispatch();
 
 
-    return (<form className="registration-frame">
-        <div className="container">
-            <div id="container-first">
+    return (<form onSubmit={e => { manageSubmit(); e.preventDefault(); }} className="registration-frame">
+        <div className="container" id="header-container">
+            {/* <div id="container-first">
                 <button type="button" className="small_button" id="access_button">Login instead</button>
                 <button onClick={()=>dispatch({type:"TOGGLE_COVER"})} type="button" className="small_button" id="cancel_button">Cancel</button>
-            </div>
+            </div> */}
             <h1>Sign Up</h1>
-            <p id="introduction-text">Want to sign up, fill out this form!</p>            
+            <img onClick={()=>dispatch({type:"TOGGLE_COVER"})} src={cancelIcon} className="form-icon" />
+            {/* <p id="introduction-text">Want to sign up, fill out this form!</p>             */}
         </div>
+
+
+
         <div className="container">
 
 
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" id="email" required/>
+                <label for="email">Email</label>
+                <input disabled={loading} onChange={e=>setEmail(e.target.value)} type="text" placeholder="Enter Email" name="email" id="email" required/>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" id="psw" required/>
+                <label for="psw">Password</label>
+                <input disabled={loading} onChange={e=>setPassword(e.target.value)} type="password" placeholder="Enter Password" name="psw" id="psw" required/>
 
-                <label for="psw-repeat"><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required/>
-                <hr/>
-                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                <label for="psw-repeat">Repeat Password</label>
+                <input disabled={loading} onChange={e=>setRepeatPassword(e.target.value)} type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required/>
 
-                <button type="submit" id="register_button">Register</button>
+
                 {/* <button onClick={()=>dispatch({type:"TOGGLE_COVER"})} id="cancel_button">Cancel</button> */}
-                <div id="progress-container">
+                {/* <div id="progress-container">
                     <div style={{background:"rgba(255,145,0, 0.2)"}}></div>
                     <div></div>
                     <div></div>
                     <div></div>
-                </div>
+                </div> */}
     
         </div>
 
+        <div  id="message-container" style={Object.assign(messageStyle, {})}>
+            {
+                loading ? <Circles configuration={loading_circle_style}/> : null
+            }
+            
+            {/* <Circles configuration={loading_circle_style}/> */}
+            <p style={{fontFamily:'sfb'}}>{message}</p>
+        </div>
+
+        <div className="container">
+            <p >By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+            <button disabled={loading} type="submit" id="register_button">Register</button>
+        </div>
 
     </form>)
 }

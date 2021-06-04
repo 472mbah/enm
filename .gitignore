@@ -22,4 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-./src/functions/*
+./src/functions/index.js
+./src/functions/schema.js

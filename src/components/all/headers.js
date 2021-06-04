@@ -27,15 +27,7 @@ export const GreyHeader = () => {
     const dispatch = useDispatch();
     const menuMobile = useSelector(state => state.rootReducer.mobile_menu);
 
-    const is_dm = () => {
-        let p = window.location.pathname;
-        return p=="/enm" || p=="/" || p=="/enm/";
-    }
-
-
-
-    const [dm, set_dm] = useState(is_dm());
-    const [past_slider, set_past_slider] = useState();
+    const [onPortal, setOnPortal] = useState(false);
     const [previous_pos, set_previous_pos] = useState(0);
     const [hide, set_hide] = useState(false);
 
@@ -44,7 +36,6 @@ export const GreyHeader = () => {
     }
 
     const eval_height = () => {
-        // set_past_slider(window.pageYOffset>window.innerHeight);
         const currentScrollPos = window.pageYOffset;
         set_hide(previous_pos < currentScrollPos)
         set_previous_pos(currentScrollPos);            
@@ -52,48 +43,36 @@ export const GreyHeader = () => {
 
 
 
-    // const location = useLocation();
-    // useEffect(() => {
-
-    //     set_dm(is_dm());
-
-    // }, [location]);
-
     useEffect(() => {
         window.onscroll = () => eval_height();
         return function cleanupListener() {
             window.onscroll = () => eval_height();
         }
-      });
+    });
 
+    const location = useLocation();
+    useEffect(() => {
+        
+        setOnPortal(window.location.pathname.includes('portal'));
+        
+        
+    }, [location]);    
 
     const [hover, setIndex] = useState(false);
 
     const styling = () => {
-        // let val = dm & !past_slider ? 0 : 255;
         let val = 255;
-        // let val2 = dm & !past_slider ? 255 : 0;
         let val2 = 0;
         return {
              
             background: `rgba(${val}, ${val}, ${val}, 0.2)`,
             color: `rgba(${val2}, ${val2}, ${val2}, 0.7)`,
-            // borderBottom: !dm || past_slider ? "1.5px solid #ddd" : "none",
             borderBottom: "1.5px solid #ddd",
-            transform: `translateY(${hide?'-100':'0'}%)`
+            transform: `translateY(${hide || onPortal ?'-100':'0'}%)`
         };
     }
 
-    const styling_button = () => {
-        let val = dm & !past_slider ? 0 : 255;
-        let val2 = dm & !past_slider ? 255 : 0;
-        // let hide = 
-        // set_previous_pos(window.pageYOffset)
-        return {
-            background: `rgba(${val}, ${val}, ${val}, 0.2)`,
-            color: `rgba(${val2}, ${val2}, ${val2}, 0.7)`,
-        };
-    }
+
 
     return (
         <div  style={styling()}  onMouseLeave={()=>setIndex(false)} onMouseEnter={()=>setIndex(true)}  id="start-float-header">
@@ -111,7 +90,7 @@ export const GreyHeader = () => {
             {
                 Object.keys(data).map(k=> 
                     <div  className="menu-parent">
-                        <MenuUnit dm={false} show={hover==k} index={k} />
+                        <MenuUnit show={hover==k} index={k} />
                     </div>
                 )                
             }
@@ -138,7 +117,7 @@ export const MobileMenu = () => {
     
 } 
 
-const MenuUnit = ({ index, dm }) => {
+const MenuUnit = ({ index }) => {
     
     const [hover, setHover] = useState(false);
 
@@ -146,9 +125,8 @@ const MenuUnit = ({ index, dm }) => {
     const single = data[index].hasOwnProperty("link");
 
     const styling = () => {
-        let val2 = dm ? 255 : 0;
         return {
-            color: `rgba(${val2}, ${val2}, ${val2}, 0.7)`,
+            
         };
     }
 
@@ -158,8 +136,8 @@ const MenuUnit = ({ index, dm }) => {
         
         {
             single ? 
-                <Link to={link}><button style={styling()}  className="nav-bar-button" >{name}</button></Link>
-            : <button style={styling()} className="nav-bar-button" >{name}</button>
+                <Link to={link}><button  className="nav-bar-button" >{name}</button></Link>
+            : <button  className="nav-bar-button" >{name}</button>
         }
 
         

@@ -114,6 +114,17 @@
     cursor: pointer;
 }
 
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 250ms ease-in;
+  }
+  
+
 @media only screen and (max-width: 750px){
     #main-body {
         width: 100%;
@@ -140,3 +151,4 @@
     }
 
 }
+

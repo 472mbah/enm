@@ -86,7 +86,9 @@ export const Query = () => {
     </form>)
 }
 
-export const Registration = () => {
+export const Registration = (props) => {
+
+    const history = useHistory();
 
     const passwords_not_same = "Passwords not the same"
     const passwords_length = "Password length needs to be atleast 8 characters long"
@@ -137,7 +139,6 @@ export const Registration = () => {
         
         
 
-        console.log("doing something")
 
         setLoading(true)
         setMessageStyle(loading_style);
@@ -151,6 +152,11 @@ export const Registration = () => {
         setMessage(message);
         setBackgroundStyle(success ? success_style_main : error_style_main);
         if (!success) setLoading(false)
+
+        if(success) {
+            dispatch({ type:"TOGGLE_COVER", to:1 })
+            history.push("/portal")
+        }
 
     }
 

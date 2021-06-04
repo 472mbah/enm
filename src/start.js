@@ -31,27 +31,17 @@ export const Main = () => {
     // const id = useParams().id;
 
 
-    // useEffect(() => {
-    //     const handleWindowResize = () => dispatch({type:"SET_MOBILE", mobile:window.innerWidth < 500});
-    //     window.addEventListener("resize", handleWindowResize);
-    //   });
 
     
 
 
 
-    return <div  id="start-container">
+    return <div style={{overflow: big_cover?'hidden':'auto', height: big_cover?'100vh':'auto'}} id="start-container">
 
-{/* {                    big_cover ? <div id="big-cover">
-                        {
-                            big_cover_to==0 ? <Registration/>  :
-                            big_cover_to==1 ? <Query/> : <FileManager/>
-                        }
 
-                    </div> : null} */}
-<div style={{top:big_cover?'0':'-100%'}} id="big-cover">
-<Registration/>
-</div>
+            <div style={{top:big_cover?'0':'-100%'}} id="big-cover">
+            <Registration/>
+            </div>
 
             <GreyHeader/>
         <MainBody/>

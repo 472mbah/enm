@@ -5,6 +5,7 @@ import { Maths, Introduction } from '../pages/subjects';
 import { BrowserRouter as Router, useLocation, Route, Link, useHistory  } from "react-router-dom";
 import Circles from '../components/loading/circles';
 import cancelIcon from '../styling/icons/cancel.png';
+import authentication from '../functions/authentication';
 
 export const Main = () => {
     const location = useLocation();
@@ -88,9 +89,9 @@ export const Query = () => {
 export const Registration = () => {
 
     const passwords_not_same = "Passwords not the same"
+    const passwords_length = "Password length needs to be atleast 8 characters long"
     const loading_message = "Authorising details"
-    const success_message = "Almost there..."
-    const error_style = { background:"#E81212", color:"#fff" }
+    const error_style = { background:"#E81212", color:"#fff", padding: '0.5em 1em' }
     const main_style = { backgroundColor:"#eee", width:'100%' }
     const success_style = { background:"#43C515", color:"#fff", padding: '1em 1em', boxShadow: '0px 0px 7px rgba(0, 0, 0, 0.5)' }
     const loading_style = { background:"#E89F12", color:"#fff", padding: '1em 1em', boxShadow: '0px 0px 7px rgba(0, 0, 0, 0.5)' }
@@ -112,31 +113,44 @@ export const Registration = () => {
     const [messageStyle, setMessageStyle] = useState(main_style)
     const [backgroundStyle, setBackgroundStyle] = useState(main_style_main)
     
-    const [stage, setStage] = useState(1);
-
     
+    // stage 1 is loginning user in
+    const [stage, setStage] = useState(0);
 
-    const manageSubmit = () => {
-        if (password!=repeatPassword) {
+    const manageSubmit = async () => {
+
+        if (password.length < 8) {
+            setThereIsError(true);
+            setMessageStyle(error_style);
+            setMessage(passwords_length);
+            setBackgroundStyle(error_style_main);
+            return;
+        } 
+
+        if (stage!=1 && password!=repeatPassword) {
             setThereIsError(true);
             setMessageStyle(error_style);
             setMessage(passwords_not_same);
             setBackgroundStyle(error_style_main);
             return;
-        } 
+        }
+        
+        
+
+        console.log("doing something")
+
         setLoading(true)
         setMessageStyle(loading_style);
         setMessage(loading_message);
         setBackgroundStyle(loading_style_main);
-        setTimeout(()=>{
 
-            setMessageStyle(success_style);
-            setMessage(success_message)
-            setBackgroundStyle(success_style_main);
-
-
-        }, 6000)
-
+        let { success, message, user } = await authentication(email, password, stage!=1 ? Date.now() : -1)
+        console.log(success, message, user)
+        setThereIsError(!success);
+        setMessageStyle(success ? success_style : error_style);
+        setMessage(message);
+        setBackgroundStyle(success ? success_style_main : error_style_main);
+        if (!success) setLoading(false)
 
     }
 
@@ -156,10 +170,16 @@ export const Registration = () => {
 
                     <label for="psw">Password</label>
                     <input disabled={loading} onChange={e=>{setPassword(e.target.value); resetState()}} type="password" placeholder="Enter Password" name="psw" id="psw" required/>
-                    
-                    <label style={{display:stage?'none':''}} for="psw-repeat">Repeat Password</label>
-                    <input style={{display:stage?'none':''}} disabled={loading} onChange={e=>{setRepeatPassword(e.target.value); resetState()}} type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required/>
-        
+
+                    {
+                        stage!=1 ? <label  for="psw-repeat">Repeat Password</label> : null
+                    }                    
+                    {
+                        stage!=1 ? <input  disabled={loading} onChange={e=>{setRepeatPassword(e.target.value); resetState()}} type="password" placeholder="Repeat Password" required/> : null
+                    }
+
+
+
             </div>        
         )                
     }

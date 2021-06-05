@@ -84,6 +84,7 @@ const MainBody = () => {
 <Switch location={location}>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/enm" component={HomePage} />
+            <Route exact path="/portal" component={Portal}  />
 
             <div id="main-body-mini">
                 <div id="main-body-inner">
@@ -96,13 +97,14 @@ const MainBody = () => {
                         <Route exact path="/about" component={Abo}  />
                         <Route exact path="/tutors" component={Tut}  />
                         <Route exact path="/jobs" component={Jbs}  />
-                        <Route exact path="/portal" component={Portal}  />
                         {/* <Footer/> */}
                     
+                        
 
                 </div>
-            </div>
+                
 
+            </div>
             </Switch>
             </CSSTransition>
         </TransitionGroup>

@@ -383,7 +383,7 @@ button:disabled {
 
 }
 
-@media only screen and (min-height: 750px){
+@media only screen and (max-height: 750px){
     #big-cover {
         height: 100%;
         width: 100%;

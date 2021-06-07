@@ -146,7 +146,6 @@ export const BigCover = (props) => {
             <button style={{display:stage==2?"none":""}} onClick={()=>{setStage(stage==1?0:1); resetState()}} disabled={loading} type="button" id="instead_button">{stage==1?"Sign Up":"Login"} Instead</button>
             <img onClick={()=>dispatch({type:"TOGGLE_COVER"})} src={cancelIcon} className="form-icon" />
         </div>
-
         <div  id="message-container" style={Object.assign(messageStyle, {})}>
             {
                 loading ? <Circles configuration={loading_circle_style}/> : null

@@ -1,5 +1,6 @@
 import './styling/start.css';
 //https://reactcommunity.org/react-transition-group/transition
+//
 import chat from './styling/icons/chat.svg';
 import { BigCover } from './main_content';
 import { GreyHeader } from './components/all/headers';

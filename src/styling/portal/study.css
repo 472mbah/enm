@@ -1,0 +1,31 @@
+.subject-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5em;
+    cursor: pointer;
+    width: 25em;
+}
+
+.subject-container div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    background-color: #f3f3f3;
+    border-radius: 0 0 0.5em 0.5em;
+}
+
+.subject-container:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.subject-container img {
+    height: 10em;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.subject-container div p {
+    max-lines: 5;
+}

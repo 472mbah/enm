@@ -6,10 +6,52 @@ import practiceIcon from '../../styling/icons/portal_icons/practice.png';
 import settingsIcon from '../../styling/icons/portal_icons/settings.png';
 import studyIcon from '../../styling/icons/portal_icons/study.png';
 import examIcon from '../../styling/icons/portal_icons/test.png';
-import { useState } from 'react';
+import logoutIcon from '../../styling/icons/portal_icons/logout.png';
+import newsIcon from '../../styling/icons/portal_icons/newspaper.png';
+import childrenIcon from '../../styling/icons/portal_icons/children.png';
+import billingsIcon from '../../styling/icons/portal_icons/billings.png';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
 import Circles from '../../components/loading/circles';
+import { BrowserRouter as Router, useLocation,  useParams, useHistory  } from "react-router-dom";
 
+ 
 export default () => {
+
+    const location = useLocation();
+    const history = useHistory();
+    const [ userType, setUserType ] = useState(-1);
+    const [ showErrorMessage, setShowErrorMessage ] = useState(false);
+    const type = useParams().type;
+    const big_cover = useSelector(state => state.rootReducer.big_cover);
+    const user = useSelector(state => state.user);
+
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+        
+        switch (type) {
+            case "students": setUserType(0); break;
+            case "guardians": setUserType(1); break;
+            case "tutors": setUserType(2); break;
+            default: 
+                setUserType(-1); 
+                document.body.style.background = "#efc5b5";
+                dispatch({type:"TOGGLE_COVER", to:0})
+                setShowErrorMessage(true);
+                break;
+        }        
+
+    }, [location])
+
+    // useEffect(()=>{
+
+    //     if (Object.keys(user)==0) {
+    //         dispatch({ type:"TOGGLE_COVER", to:0, big_cover_error_type:2 })
+
+    //     }
+
+    // }, [user])
 
     const [showPanel, setShowPanel] = useState(true);
 
@@ -23,36 +65,69 @@ export default () => {
     const [message, setMessage] = useState("")
     const [messageStyle, setMessageStyle] = useState(main_style)
 
+    // 0 student
+    // 1 guardian
+    // 2 tutor 
+    // *- (Everyone not including guardian)
     const panels = [
-        { text:"Study", icon:studyIcon, query:"" },
-        { text:"Homeworks", icon:homeworkIcon, query:"" },
-        { text:"Exam papers", icon:examIcon, query:"" },
-        { text:"Practice", icon:practiceIcon, query:"" },
-        { text:"Lessons", icon:lessonsIcon, query:"" },
-        { text:"Details & Preferences", icon:settingsIcon, query:"" },        
- 
+        //  tutors
+        { text:"My Students", icon:childrenIcon, query:"", showTo:[2] },        
+
+        { text:"Study", icon:studyIcon, query:"", showTo:[0, 2] },
+        { text:"Homeworks", icon:homeworkIcon, query:"", showTo:[0, 2] },
+        { text:"Exam papers", icon:examIcon, query:"", showTo:[0, 2] },
+        { text:"Practice", icon:practiceIcon, query:"", showTo:[0, 2] },
+        { text:"Lessons", icon:lessonsIcon, query:"", showTo:[0, 2] },
+        
+        // Guardian
+        { text:"Children", icon:childrenIcon, query:"", showTo:[1] },        
+        { text:"Billings", icon:billingsIcon, query:"", showTo:[1] },        
+        { text:"News & Updates", icon:newsIcon, query:"", showTo:[0, 1, 2] },        
+
+        { text:"Details & Preferences", icon:settingsIcon, query:"", showTo:[0, 1, 2] },        
+        
+
     ];
 
-
+    const onLogout = () => {
+        dispatch({ type:"REMOVE_USER" })
+        history.push("/")        
+    }
 
     let panel_comps = [];
 
-    panels.forEach(({ text, icon }, index)=>
-        panel_comps.push(
+    panels.forEach(({ text, icon, showTo }, index)=>
         
-        <div className="portal-button-container">
-            <img className="portal-menu-icons" src={icon}/>
-            <button 
-                className="portal-side-buttons" 
-                key={index}>{text}
-            </button>
-        </div>
-        )
+            showTo.includes(userType) ? 
+            // panels = panels.filter(item=>item.);
+            
+                panel_comps.push(
+        
+                    <div className="portal-button-container">
+                        <img className="portal-menu-icons" src={icon}/>
+                        <button 
+                            className="portal-side-buttons" 
+                            key={index}>{text}
+                        </button>
+                    </div>
+                    )                
+            : null            
+        
     )
 
     return <div style={{overflowY:'auto'}}>
         
-        <div onMouseEnter={()=>document.body.style.background="#e1d590"} onMouseLeave={()=>document.body.style.background="#fff"} onClick={()=>setShowPanel(!showPanel)} id="box-button">
+        {
+                showErrorMessage ? 
+                <h1 style={{width:"10em", marginTop:"2em", marginLeft:"2em"}}>Oops, this doesn't seem to be the right place. Trying logging in and we will redirect you</h1>
+                : null
+        }
+
+        {
+            userType != -1 ? 
+
+            <div>
+<div onMouseEnter={()=>document.body.style.background="#87cefa"} onMouseLeave={()=>document.body.style.background="#fff"} onClick={()=>setShowPanel(!showPanel)} id="box-button">
             <img  style={{transform: `rotate(${showPanel ? -180:0}deg)`}} className="portal-menu-icons"  src={leftArrow}/>
         </div>
 
@@ -61,14 +136,13 @@ export default () => {
 
 
             <div className="grey-background">
-                <p style={{fontFamily:"sfb", fontSize:"35px"}}>Oumie Bah</p>
-                <p >Student</p>
+                <p style={{fontFamily:"sfb", fontSize:"35px"}}>{`${user.first_name} ${user.last_name}`}</p>
+                <div onClick={()=>onLogout()}>
+                    <img src={logoutIcon}/>
+                    <button >Sign Out</button>
+                </div>
             </div>
 
-            {/* <div id="two-row">
-
-                <button> Logout </button>
-            </div> */}
 
         <div  id="message-container" style={Object.assign(messageStyle, {})}>
             {
@@ -82,9 +156,15 @@ export default () => {
             </div>
         </div>
 
-        <div style={{marginLeft:showPanel ? "15em" : "4em", width: showPanel ? "70%" : "90%"  }} id="portal-main-content">
+        <div style={{marginLeft:showPanel ? "15em" : "4em", width: showPanel ? "70%" : "85%"  }} id="portal-main-content">
             <h1>This is a template title</h1>
             <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                
@@ -96,6 +176,10 @@ export default () => {
             </p>
         </div>
 
+            </div>            
+            
+            : null            
+        }
 
 
     </div>   

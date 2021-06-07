@@ -1,7 +1,7 @@
 import './styling/start.css';
 //https://reactcommunity.org/react-transition-group/transition
 import chat from './styling/icons/chat.svg';
-import { Registration, Query } from './main_content';
+import { BigCover } from './main_content';
 import { GreyHeader } from './components/all/headers';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
@@ -35,17 +35,17 @@ export const Main = () => {
 
     // const id = useParams().id;
 
-
+//, height: big_cover?'100vh':'auto'
 
     
 
 
 
-    return <div style={{overflow: big_cover?'hidden':'auto', height: big_cover?'100vh':'auto'}} id="start-container">
+    return <div style={{overflow: big_cover?'hidden':'auto'}} id="start-container">
 
 
             <div style={{top:big_cover?'0':'-100%'}} id="big-cover">
-            <Registration/>
+            <BigCover/>
             </div>
 
             <GreyHeader/>
@@ -84,7 +84,8 @@ const MainBody = () => {
 <Switch location={location}>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/enm" component={HomePage} />
-            <Route exact path="/portal" component={Portal}  />
+            <Route exact path="/portal/:type" component={Portal}  />
+
 
             <div id="main-body-mini">
                 <div id="main-body-inner">

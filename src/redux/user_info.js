@@ -1,19 +1,16 @@
 
 
-const initial = {
-    name: "Momodou Bah"
-}
+const initial = {}
 
 
-export const user_info = (state=initial, action)  => {
+export const user = (state=initial, action)  => {
     const { type } = action; 
     switch(type) {
-        case "SET_USER_DETAILS":
-            state.name = action.payload;
-            return state;
-        case "RESET_USER_DETAILS":
-            state.name = "";
-            return state;
+        case "SET_USER":
+            return action.user;
+
+        case "REMOVE_USER":
+            return {};
         default: 
             return state; 
     }

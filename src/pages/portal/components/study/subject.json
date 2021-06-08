@@ -4,5 +4,36 @@
         "coverImage":"https://image.freepik.com/free-photo/flat-lay-math-science-red-school-supplies_23-2148416101.jpg",
         "description":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively,",
         "link":""
-    }
+    },
+    "english": {
+        "name":"English",
+        "coverImage":"https://image.freepik.com/free-photo/education-concept-3d-books-boy-blue-background-modern-flat-design-isometric-concept-education-back-school_387680-817.jpg",
+        "description":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively,",
+        "link":""
+    },
+    "science": {
+        "name":"Science",
+        "coverImage":"https://image.freepik.com/free-vector/flat-illustration-laboratory-room_23-2148880773.jpg",
+        "description":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively,",
+        "link":""
+    },
+    "languages": {
+        "name":"Languages",
+        "coverImage":"https://image.freepik.com/free-vector/speech-bubble-composition-with-flags_23-2147885793.jpg",
+        "description":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively,",
+        "link":""
+    },
+    "humanities": {
+        "name":"Humanities",
+        "coverImage":"https://image.freepik.com/free-photo/armour-prince_138213-1.jpg",
+        "description":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively,",
+        "link":""
+    },
+    "psychology": {
+        "name":"Psychology",
+        "coverImage":"https://image.freepik.com/free-vector/tiny-people-beautiful-flower-garden-inside-female-head-isolated-flat-illustration_74855-11098.jpg",
+        "description":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively,",
+        "link":""
+    }    
+  
 }

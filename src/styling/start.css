@@ -123,7 +123,7 @@
     opacity: 1;
     transition: opacity 250ms ease-in;
   }
-  
+
 
 @media only screen and (max-width: 750px){
     #main-body {

@@ -1,0 +1,159 @@
+{
+    "maths":{
+        "header":{"url":"https://images.pexels.com/photos/1329295/pexels-photo-1329295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+        "overview":{ "text":"This section includes recent GCSE Maths past papers from AQA, Edexcel, Eduqas, OCR, WJEC, CCEA and the CIE IGCSE. This section also includes SQA National 5 maths past papers. If you are not sure which exam board you are studying ask your teacher. Past papers are a fantastic way to prepare for an exam as you can practise the questions in your own time. You can download each of the exam board's papers by clicking the links below." }
+        , 
+        "boards": {
+            "content": 
+            [
+                {"text":"AQA"}, 
+                {"text":"Eduqas"}, 
+                {"text":"Edexcel"}, 
+                {"text":"OCR"}, 
+                {"text":"WJEC"},
+                {"text":"CCEA"},
+                {"text":"CIE"},
+                {"text":"SQA"}
+            ]
+        },
+        "levels": {
+            "content": 
+            [
+                {"text":"GCSE"}, 
+                {"text":"A-Levels"}, 
+                {"text":"IGCSE"} 
+            ]
+        }        
+    },
+    "english":{
+        "header":{"url":"https://images.pexels.com/photos/1329295/pexels-photo-1329295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+        "overview":{ "text":"This section includes recent GCSE Maths past papers from AQA, Edexcel, Eduqas, OCR, WJEC, CCEA and the CIE IGCSE. This section also includes SQA National 5 maths past papers. If you are not sure which exam board you are studying ask your teacher. Past papers are a fantastic way to prepare for an exam as you can practise the questions in your own time. You can download each of the exam board's papers by clicking the links below." }
+        , 
+        "boards": {
+            "content": 
+            [
+                {"text":"AQA"}, 
+                {"text":"Eduqas"}, 
+                {"text":"Edexcel"}, 
+                {"text":"OCR"}, 
+                {"text":"WJEC"},
+                {"text":"CCEA"},
+                {"text":"CIE"},
+                {"text":"SQA"}
+            ]
+        },
+        "levels": {
+            "content": 
+            [
+                {"text":"GCSE"}, 
+                {"text":"A-Levels"}, 
+                {"text":"IGCSE"} 
+            ]
+        }        
+    },
+    "science":{
+        "header":{"url":"https://images.pexels.com/photos/1329295/pexels-photo-1329295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+        "overview":{ "text":"This section includes recent GCSE Maths past papers from AQA, Edexcel, Eduqas, OCR, WJEC, CCEA and the CIE IGCSE. This section also includes SQA National 5 maths past papers. If you are not sure which exam board you are studying ask your teacher. Past papers are a fantastic way to prepare for an exam as you can practise the questions in your own time. You can download each of the exam board's papers by clicking the links below." }
+        , 
+        "boards": {
+            "content": 
+            [
+                {"text":"AQA"}, 
+                {"text":"Eduqas"}, 
+                {"text":"Edexcel"}, 
+                {"text":"OCR"}, 
+                {"text":"WJEC"},
+                {"text":"CCEA"},
+                {"text":"CIE"},
+                {"text":"SQA"}
+            ]
+        },
+        "levels": {
+            "content": 
+            [
+                {"text":"GCSE"}, 
+                {"text":"A-Levels"}, 
+                {"text":"IGCSE"} 
+            ]
+        }        
+    },
+    "languages":{
+        "header":{"url":"https://images.pexels.com/photos/1329295/pexels-photo-1329295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+        "overview":{ "text":"This section includes recent GCSE Maths past papers from AQA, Edexcel, Eduqas, OCR, WJEC, CCEA and the CIE IGCSE. This section also includes SQA National 5 maths past papers. If you are not sure which exam board you are studying ask your teacher. Past papers are a fantastic way to prepare for an exam as you can practise the questions in your own time. You can download each of the exam board's papers by clicking the links below." }
+        , 
+        "boards": {
+            "content": 
+            [
+                {"text":"AQA"}, 
+                {"text":"Eduqas"}, 
+                {"text":"Edexcel"}, 
+                {"text":"OCR"}, 
+                {"text":"WJEC"},
+                {"text":"CCEA"},
+                {"text":"CIE"},
+                {"text":"SQA"}
+            ]
+        },
+        "levels": {
+            "content": 
+            [
+                {"text":"GCSE"}, 
+                {"text":"A-Levels"}, 
+                {"text":"IGCSE"} 
+            ]
+        }        
+    },
+    "humanities":{
+        "header":{"url":"https://images.pexels.com/photos/1329295/pexels-photo-1329295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+        "overview":{ "text":"This section includes recent GCSE Maths past papers from AQA, Edexcel, Eduqas, OCR, WJEC, CCEA and the CIE IGCSE. This section also includes SQA National 5 maths past papers. If you are not sure which exam board you are studying ask your teacher. Past papers are a fantastic way to prepare for an exam as you can practise the questions in your own time. You can download each of the exam board's papers by clicking the links below." }
+        , 
+        "boards": {
+            "content": 
+            [
+                {"text":"AQA"}, 
+                {"text":"Eduqas"}, 
+                {"text":"Edexcel"}, 
+                {"text":"OCR"}, 
+                {"text":"WJEC"},
+                {"text":"CCEA"},
+                {"text":"CIE"},
+                {"text":"SQA"}
+            ]
+        },
+        "levels": {
+            "content": 
+            [
+                {"text":"GCSE"}, 
+                {"text":"A-Levels"}, 
+                {"text":"IGCSE"} 
+            ]
+        }        
+    },
+    "psychology":{
+        "header":{"url":"https://images.pexels.com/photos/1329295/pexels-photo-1329295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+        "overview":{ "text":"This section includes recent GCSE Maths past papers from AQA, Edexcel, Eduqas, OCR, WJEC, CCEA and the CIE IGCSE. This section also includes SQA National 5 maths past papers. If you are not sure which exam board you are studying ask your teacher. Past papers are a fantastic way to prepare for an exam as you can practise the questions in your own time. You can download each of the exam board's papers by clicking the links below." }
+        , 
+        "boards": {
+            "content": 
+            [
+                {"text":"AQA"}, 
+                {"text":"Eduqas"}, 
+                {"text":"Edexcel"}, 
+                {"text":"OCR"}, 
+                {"text":"WJEC"},
+                {"text":"CCEA"},
+                {"text":"CIE"},
+                {"text":"SQA"}
+            ]
+        },
+        "levels": {
+            "content": 
+            [
+                {"text":"GCSE"}, 
+                {"text":"A-Levels"}, 
+                {"text":"IGCSE"} 
+            ]
+        }        
+    }    
+}
+

@@ -1,0 +1,40 @@
+{
+   "maths":[
+       {
+        "title":"Addition",
+        "description":"Practice basic arithemtic expressions",
+        "setDate":"07/06/2021",
+        "dueDate":"23/06/2021",
+        "setBy":"Mr Christian",
+        "subject":"Maths",
+        "completed":true
+    },
+    {
+        "title":"Subtraction",
+        "description":"Practice basic arithemtic expressions",
+        "setDate":"07/06/2021",
+        "dueDate":"23/06/2021",
+        "setBy":"Mr Christian",
+        "subject":"Maths",
+        "completed":true
+    },
+    {
+        "title":"Division",
+        "description":"Practice basic arithemtic expressions",
+        "setDate":"07/06/2021",
+        "dueDate":"23/06/2021",
+        "setBy":"Mr Christian",
+        "subject":"Maths",
+        "completed":true
+    },
+    {
+        "title":"Multiplication",
+        "description":"Practice basic arithemtic expressions",
+        "setDate":"07/06/2021",
+        "dueDate":"23/06/2021",
+        "setBy":"Mr Christian",
+        "subject":"Maths",
+        "completed":true
+    }            
+   ] 
+}

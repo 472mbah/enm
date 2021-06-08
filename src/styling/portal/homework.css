@@ -1,0 +1,65 @@
+.completed-section {
+    display: flex;
+    flex-direction: 1em;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.completed-section div {
+    display: flex;
+    flex-direction: 1em;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.completed-button {
+    border-radius: 0.3em;
+    padding: 0.4em;
+    font-family: sfb;
+    cursor: pointer
+}
+
+#yes:hover {
+    border-radius: 2px solid #00FF00;
+}
+
+#no:hover {
+    border-radius: 2px solid #FF6347;
+}
+
+.individual-homework-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 250px;
+}
+
+.horizontal_dotted_line{
+    border-bottom: 2px dotted #e7e5e5;
+    width: 100%;
+  } 
+
+  .box-span {
+      background: #f3f3f3;
+      padding: 0.4em;
+      border-radius: 0.3em;
+      width: fit-content;
+  }
+
+  .homework-group-container {
+      display: grid;
+      gap: 1em;
+  }
+
+  .apart-div {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    align-items: center;
+}
+

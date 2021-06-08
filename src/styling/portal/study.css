@@ -1,9 +1,22 @@
+#study-main-container {
+    display: grid;
+    grid-gap: 1em;
+}
+
+
+#study-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+
 .subject-container {
     display: flex;
     flex-direction: column;
     border-radius: 0.5em;
     cursor: pointer;
-    width: 25em;
+    width: fit-content;
 }
 
 .subject-container div {
@@ -11,12 +24,20 @@
     flex-direction: column;
     gap: 1em;
     padding: 1em;
-    background-color: #f3f3f3;
+    /* background-color: #f6f6f6; */
     border-radius: 0 0 0.5em 0.5em;
 }
 
+.subject-container div button {
+    background: #fff;
+    border-radius: 0.2em;
+    width: fit-content;
+    padding: 0.5em;
+    font-family: sfb;
+} 
+
 .subject-container:hover{
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .subject-container img {
@@ -29,3 +50,6 @@
 .subject-container div p {
     max-lines: 5;
 }
+
+
+

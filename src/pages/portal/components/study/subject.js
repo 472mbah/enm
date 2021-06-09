@@ -13,10 +13,15 @@ export const Subject = (props) => {
     return (
         <div className="subject-container">
             <img src={coverImage}/>
-            <div style={{background:colour}}>
+            <div className="subject-container-inner" style={{background:colour}}>
                 <h1>{name}</h1>
                 <p className="truncated_paragraph">{description}</p>
-                <button>View content</button>
+                <div className="button-containers">
+                    <button>View Content</button>
+                    <button>Practice</button>
+                    <button>Exam Papers</button>
+                    <button>Lessons</button>
+                </div>
             </div>
 
         </div>

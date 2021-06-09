@@ -19,7 +19,7 @@
     width: fit-content;
 }
 
-.subject-container div {
+.subject-container .subject-container-inner {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -51,5 +51,12 @@
     max-lines: 5;
 }
 
+.button-containers {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    gap: 1em;
+    flex-wrap: wrap;
+}
 
 

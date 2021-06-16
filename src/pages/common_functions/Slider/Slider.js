@@ -14,12 +14,12 @@ import pic5 from '../../../styling/backgrounds/pexels-photo-5.jpeg';
  * This handles the Sliding functionality.
 */
 
-export const Slider = ({ current, images }) => {
+export const Slider = ({ current, images, height }) => {
 
   const setInitialSlides = () => {
     let slides = []
     images.forEach((url, i)=>{
-      slides.push(<SliderContent display={i==current} width={window.innerWidth} img_src={url}/>);
+      slides.push(<SliderContent display={i==current} width={window.innerWidth} height={height} img_src={url}/>);
     })  
     setSlides(slides);
   }
@@ -47,8 +47,8 @@ export const Slider = ({ current, images }) => {
 }
 
 
-const SliderContent = ({ img_src, display, width }) => {
-  return <img style={{display, width}} className="full-image" src={img_src}/> 
+const SliderContent = ({ img_src, display, width, height }) => {
+  return <img style={{display, width, height}} className="full-image" src={img_src}/> 
 }
 
 

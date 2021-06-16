@@ -3,36 +3,153 @@
         "name":"Mathematics",
         "coverImage":"https://image.freepik.com/free-photo/flat-lay-math-science-red-school-supplies_23-2148416101.jpg",
         "description":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively,",
-        "link":""
+        "icon":"https://image.flaticon.com/icons/png/512/2436/2436632.png",
+        "content":[
+            {
+                "name":"Differentiation",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Integration",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Pythagoras' Theorem",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Completing the square",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Differentiation",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Integration",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Pythagoras' Theorem",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Completing the square",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Differentiation",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Integration",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Pythagoras' Theorem",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Completing the square",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Differentiation",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Integration",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Pythagoras' Theorem",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            },
+            {
+                "name":"Completing the square",
+                "description":"Differentiation, in mathematics, process of finding the derivative, or rate of change, of a function. In contrast to the abstract nature of the theory behind it, the practical technique of differentiation can be carried out by purely algebraic manipulations, using three basic derivatives, four rules of operation, and a knowledge of how to manipulate functions.",
+                "lastUpdate":"09/06/2021",
+                "coverImage":"https://i.stack.imgur.com/glIra.gif"
+            }                                                              
+        ],
+        "practice":"",
+        "examPapers":[
+            {"name": "Paper 1 (Core) 0580/11", "createdBy":"Cambridge", "dateExamined":"June 2018", "qualification":"IGCSE", "paper":"", "markScheme":""},
+            {"name": "Paper 1 (Core) 0580/11", "createdBy":"Cambridge", "dateExamined":"June 2018", "qualification":"IGCSE", "paper":"", "markScheme":""},
+            {"name": "Paper 1 (Core) 0580/11", "createdBy":"Cambridge", "dateExamined":"June 2018", "qualification":"IGCSE", "paper":"", "markScheme":""}
+        ],
+        "myLessons":[
+            {
+                "date":"07/06/2021",
+                "tutor":"DR.Tavakoli",
+                "topic":"Differentiation",
+                "notes":[{"title":"", "description":""}, {"title":"", "description":""}, {"title":"", "description":""}]
+            }
+        ]
     },
     "english": {
         "name":"English",
         "coverImage":"https://image.freepik.com/free-photo/education-concept-3d-books-boy-blue-background-modern-flat-design-isometric-concept-education-back-school_387680-817.jpg",
         "description":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively,",
-        "link":""
+        "link":"",
+        "icon":"https://image.flaticon.com/icons/png/512/2436/2436632.png"
     },
     "science": {
         "name":"Science",
         "coverImage":"https://image.freepik.com/free-vector/flat-illustration-laboratory-room_23-2148880773.jpg",
         "description":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively,",
+        "icon":"https://image.flaticon.com/icons/png/512/2436/2436632.png",
         "link":""
     },
     "languages": {
         "name":"Languages",
         "coverImage":"https://image.freepik.com/free-vector/speech-bubble-composition-with-flags_23-2147885793.jpg",
         "description":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively,",
+        "icon":"https://image.flaticon.com/icons/png/512/2436/2436632.png",
         "link":""
     },
     "humanities": {
         "name":"Humanities",
         "coverImage":"https://image.freepik.com/free-photo/armour-prince_138213-1.jpg",
         "description":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively,",
+        "icon":"https://image.flaticon.com/icons/png/512/2436/2436632.png",
         "link":""
     },
     "psychology": {
         "name":"Psychology",
         "coverImage":"https://image.freepik.com/free-vector/tiny-people-beautiful-flower-garden-inside-female-head-isolated-flat-illustration_74855-11098.jpg",
         "description":"Fleet Tutors has a team of private maths tutors who have been selected carefully to ensure they have the experience and qualifications to be able to allow the individual to achieve their fullest potential. In depth, specialist, maths knowledge to the level required in each topic area. Whether additional tutoring is required across the syllabus or for specific areas such as algebra and equations or geometry, scientific maths and probability are topics that apply as much to future success as they are required to pass exams, at all levels of education. Whether your child has shown particular talent in this subject or alternatively,",
+        "icon":"https://image.flaticon.com/icons/png/512/2436/2436632.png",
         "link":""
     }    
   

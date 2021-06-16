@@ -1,21 +1,22 @@
-import '../../styling/portal/index.css'
-import leftArrow from '../../styling/icons/right-arrow.png';
+import { useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory, useLocation, useParams } from "react-router-dom";
+import Circles from '../../components/loading/circles';
+import billingsIcon from '../../styling/icons/portal_icons/billings.png';
+import childrenIcon from '../../styling/icons/portal_icons/children.png';
 import homeworkIcon from '../../styling/icons/portal_icons/homework.png';
 import lessonsIcon from '../../styling/icons/portal_icons/lessons.png';
+import logoutIcon from '../../styling/icons/portal_icons/logout.png';
+import newsIcon from '../../styling/icons/portal_icons/newspaper.png';
 import practiceIcon from '../../styling/icons/portal_icons/practice.png';
 import settingsIcon from '../../styling/icons/portal_icons/settings.png';
 import studyIcon from '../../styling/icons/portal_icons/study.png';
 import examIcon from '../../styling/icons/portal_icons/test.png';
-import logoutIcon from '../../styling/icons/portal_icons/logout.png';
-import newsIcon from '../../styling/icons/portal_icons/newspaper.png';
-import childrenIcon from '../../styling/icons/portal_icons/children.png';
-import billingsIcon from '../../styling/icons/portal_icons/billings.png';
-import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
-import Circles from '../../components/loading/circles';
-import { BrowserRouter as Router, useLocation,  useParams, useHistory  } from "react-router-dom";
-import Study from './components/study/study';
+import leftArrow from '../../styling/icons/right-arrow.png';
+import '../../styling/portal/index.css';
+import ViewContent from './components/study/indiv_subject/ViewContent';
 import { HomeworkMain } from './components/homework';
+import Study from './components/study/study';
  
 export default () => {
 
@@ -26,6 +27,16 @@ export default () => {
     const type = useParams().type;
     const big_cover = useSelector(state => state.rootReducer.big_cover);
     const user = useSelector(state => state.user);
+    const [currentSection, setCurrentSection] = useState({view:0, subject:null});
+    const portalMain = useRef();
+
+    // 0 is main view
+    // 1 is view content for some subject
+    // 2 is practice for a subject
+    // 3 is exam papers for a subject
+    // 4 is lessons for a subject
+
+
 
     const dispatch = useDispatch();
 
@@ -45,15 +56,6 @@ export default () => {
 
     }, [location])
 
-    // useEffect(()=>{
-
-    //     if (Object.keys(user)==0) {
-    //         dispatch({ type:"TOGGLE_COVER", to:0, big_cover_error_type:2 })
-
-    //     }
-
-    // }, [user])
-
     const [showPanel, setShowPanel] = useState(true);
 
     const error_style = { borderRadius:'0.1em', background:"#E81212", color:"#fff", padding: '0.2em 1em' }
@@ -65,20 +67,22 @@ export default () => {
     const [loading, setLoading] = useState(false)
     const [message, setMessage] = useState("")
     const [messageStyle, setMessageStyle] = useState(main_style)
-
     // 0 student
     // 1 guardian
     // 2 tutor 
     // *- (Everyone not including guardian)
+
+
+
     const panels = [
         //  tutors
         { text:"My Students", icon:childrenIcon, query:"", showTo:[2] },        
 
         { text:"Study", icon:studyIcon, query:"", showTo:[0, 2] },
         { text:"Homeworks", icon:homeworkIcon, query:"", showTo:[0, 2] },
-        { text:"Exam papers", icon:examIcon, query:"", showTo:[0, 2] },
-        { text:"Practice", icon:practiceIcon, query:"", showTo:[0, 2] },
-        { text:"Lessons", icon:lessonsIcon, query:"", showTo:[0, 2] },
+        { text:"Exam papers", icon:examIcon, query:"", showTo:[2] },
+        { text:"Practice", icon:practiceIcon, query:"", showTo:[2] },
+        { text:"Lessons", icon:lessonsIcon, query:"", showTo:[2] },
         
         // Guardian
         { text:"Children", icon:childrenIcon, query:"", showTo:[1] },        
@@ -94,6 +98,9 @@ export default () => {
         dispatch({ type:"REMOVE_USER" })
         history.push("/")        
     }
+
+    const size1 = "1080";
+    const size2 = "1080";
 
     let panel_comps = [];
 
@@ -115,6 +122,27 @@ export default () => {
             : null            
         
     )
+
+    const chooseView = () => {
+        const { view, subject } = currentSection;
+        switch (view) {
+            case 0:
+                return (<div  className="portal-page-sections">
+                <Study setCurrentSection={setCurrentSection}/>
+                <HomeworkMain/>
+           </div>)
+
+            case 1: 
+                return <ViewContent subject={subject}/>
+            case 2: 
+                return <div>This is practice for {subject}</div>  
+            case 3: 
+                return <div>This is exam papers for {subject}</div>
+            case 4: 
+                return <div>This is lessons for {subject}</div>                                
+
+        } 
+    }
 
     return <div style={{overflowY:'auto'}}>
         
@@ -145,23 +173,42 @@ export default () => {
             </div>
 
 
-        <div  id="message-container" style={Object.assign(messageStyle, {})}>
-            {
-                loading ? <Circles configuration={loading_circle_style}/> : null
-            }
-            <p style={{fontFamily:'sfb'}}>{message}</p>
-        </div>            
+            <div  id="message-container" style={Object.assign(messageStyle, {})}>
+                {
+                    loading ? <Circles configuration={loading_circle_style}/> : null
+                }
+                <p style={{fontFamily:'sfb'}}>{message}</p>
+            </div>            
 
             <div id="portal-side-panel-menu-container">
                 {panel_comps}
             </div>
-        </div>
 
-        <div style={{marginLeft:showPanel ? "15em" : "4em", width: `calc(${showPanel ? "80%" : "95%"} - 6em)`  }} id="portal-main-content">
-            <Study/>
-            <HomeworkMain/>
 
         </div>
+                <div
+                
+                id="portal-main-content" 
+            style={{marginLeft:showPanel ? "15em" : "4em", 
+            width: showPanel ? `${70}%` : `${85}%`,
+
+            translate: `transform(-800px ,0px)`
+        }}
+             
+                >
+
+                    {
+                        currentSection.view!=0 ? <button onClick={()=>setCurrentSection({view:0})}>Back to Main</button>  : null
+                    }
+
+                    {chooseView()}
+                 
+
+                    
+                    
+
+
+                </div>
 
             </div>            
             
@@ -171,3 +218,4 @@ export default () => {
 
     </div>   
 }
+

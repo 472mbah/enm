@@ -2,10 +2,10 @@ import '../../../../styling/portal/study.css'
 import { Subject } from './subject';
 import subjects from './subject.json';
 
-export default () => {
+export default (props) => {
     
     let subjectsComponent = 
-    Object.keys(subjects).map(key=><Subject key={key} data={subjects[key]} />)
+    Object.keys(subjects).map(key=><Subject setCurrentSection={props.setCurrentSection} key={key} data={Object.assign(subjects[key], {key})} />)
     const introduction = "The following are additional resources to help you with your tutoring. Here you can see the notes that the tutors have written to help you understand concepts as well as add your own notes for better consumption during the exam season. Click on a subject to explore."
     
     return (

@@ -65,9 +65,9 @@ export const GreyHeader = () => {
         let val2 = 0;
         return {
              
-            background: `rgba(${val}, ${val}, ${val}, 0.2)`,
-            color: `rgba(${val2}, ${val2}, ${val2}, 0.7)`,
-            borderBottom: "1.5px solid #ddd",
+            // background: `rgba(${val}, ${val}, ${val}, 0.2)`,
+            color: `rgba(${val2}, ${val2}, ${val2}, 1)`,
+            // borderBottom: "1.5px solid #ddd",
             transform: `translateY(${hide || onPortal ?'-100':'0'}%)`
         };
     }

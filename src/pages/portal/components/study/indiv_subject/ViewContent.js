@@ -3,6 +3,12 @@ import subjects from '../subject.json';
 import Slider from '../../../../common_functions/Slider/Slider'
 import { useState, useEffect } from 'react';
 
+import childrenIcon from '../../../../../styling/icons/portal_icons/children.png';
+import searchIcon from '../../../../../styling/icons/search.png';
+import practiceIcon from '../../../../../styling/icons/portal_icons/practice.png';
+import studyIcon from '../../../../../styling/icons/portal_icons/study.png';
+import examIcon from '../../../../../styling/icons/portal_icons/test.png';
+
 export default (props) => {
     const { content, name, description, coverImage, icon } = subjects[props.subject];
 
@@ -26,13 +32,38 @@ export default (props) => {
       return () => clearTimeout(timer);
     });
 
+    const renderTopicsPanel = () => 
+    (
+        <div id="topics-panel">
+            <div className="icon-tab">
+                <img src={studyIcon}/>
+                <img src={practiceIcon}/>
+                <img src={examIcon}/>
+                <img src={childrenIcon}/>
+            </div>
+
+            <img id="search-icon" src={searchIcon}/>
+
+            
+        </div>        
+    ) 
 
     const contentSection = content.map(({name, description, lastUpdate, coverImage}, i)=>
         
         <div className="topic-container">
             <h3>{name}</h3>
             <p>{description}</p>
+
+            <div className="icon-tab">
+                <img src={studyIcon}/>
+                <img src={practiceIcon}/>
+                <img src={examIcon}/>
+                {/* <img src={childrenIcon}/> */}
+
+            </div>
+            
             <p className="last-update">Last update: {lastUpdate}</p>
+        
         </div>
 
     )
@@ -49,6 +80,9 @@ export default (props) => {
             <Slider images={images} height={"15em"} current={current}/>
             <p>{description}</p>
             <h2>Topics</h2>
+            <div>
+            { renderTopicsPanel() }
+            </div>
             <div id="topic-container">
             {contentSection}
             </div>
